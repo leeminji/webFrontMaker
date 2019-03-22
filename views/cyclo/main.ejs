@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<!--[if IE 7]><html lang="ko" class="ie7"><![endif]-->
+	<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+	<link rel="stylesheet" type="text/css" href="/public/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/style.css">
+	<title><%= title %></title>
+	<script src="/public/js/jquery-1.8.3.min.js"></script>
+	<!--[if lte IE 8]>
+	<script src="/public/js/html5.js"></script>
+	<![endif]-->
+	<script src="/public/js/jquery-ui.js"></script>
+	<script src="/public/js/jquery.bxslider.js"></script>
+	<script src="/public/js/slick.min.js"></script>
+</head>
+
+<body>
+	<!-- skipToContent -->
+	<div id="skipToContent">
+		<a href="#container">본문으로 바로가기</a>
+		<a href="#main-gnb-area">메뉴 바로가기</a>
+	</div>
+	<!-- //skipToContent -->
+	<div class="allwrap">
+		<!-- header 상단 -->
+		<div class="header-area">
+			<div class="section">
+				<header id="header" class="header">
+					<!-- logo -->
+					<h1><a href="" class="logo"><span><%=title%></span></a></h1>
+					<!-- //logo -->
+
+					<!-- 메인메뉴 -->
+					<nav class="main-gnb" id="main-gnb">
+						<h2 class="skip">메인메뉴</h2>
+						<ul><%-menu%></ul>
+					</nav>
+
+					<a href="javascript:;" class="btn-main-menu" id="btn-main-menu"><span class="skip">메인메뉴열기</span></a>
+				</header>
+			</div>
+		</div>
+		<!-- //header 상단 -->
+		<!-- visual-area -->
+		<div class="visual-area main-section">
+			<!-- bxslider plugin 적용 -->
+			<ul class="clear clearfix" id="main-visual">
+				<li>
+					<div class="visual-img">
+						<img src="/public/images/main/visual-img-04.png" alt="main visual image">
+					</div>
+					<div class="visual-text">
+						<p class="t_1"><span>HyupDong Cyclo Co., Ltd. </span></p>
+						<p class="t_2"><span>지속적인 기술개발 및 생산 노하우를 바탕으로 고객만족을 최우선 목표로 삼아  <br />50년간 성장해온 기업 협동싸이크로</span></p>
+					</div>
+				</li>
+				<li>
+					<div class="visual-img">
+						<img src="/public/images/main/visual-img-02.png" alt="main visual image">
+					</div>
+					<div class="visual-text">
+						<p class="t_1"><span>HyupDong Cyclo Co., Ltd. </span></p>
+						<p class="t_2"><span>지속적인 기술개발 및 생산 노하우를 바탕으로 고객만족을 최우선 목표로 삼아 <br />50년간 성장해온 기업 협동싸이크로</span></p>
+					</div>
+				</li>
+				<li>
+					<div class="visual-img">
+						<img src="/public/images/main/visual-img-03.png" alt="main visual image">
+					</div>
+					<div class="visual-text">
+						<p class="t_1"><span>HyupDong Cyclo Co., Ltd. </span></p>
+						<p class="t_2"><span>지속적인 기술개발 및 생산 노하우를 바탕으로 고객만족을 최우선 목표로 삼아  <br />50년간 성장해온 기업 협동싸이크로</span></p>
+					</div>
+				</li>
+				<li>
+					<div class="visual-img">
+						<img src="/public/images/main/visual-img-01.png" alt="main visual image">
+					</div>
+					<div class="visual-text">
+						<p class="t_1"><span>HyupDong Cyclo Co., Ltd. </span></p>
+						<p class="t_2"><span>지속적인 기술개발 및 생산 노하우를 바탕으로 고객만족을 최우선 목표로 삼아  <br />50년간 성장해온 기업 협동싸이크로</span></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- //visual-area -->
+		<hr>
+		<!-- container 본문 -->
+		<div class="container-area">
+			<div id="container">
+				<!-- main-section01 -->
+				<div class="main-section main-section01">
+					<div class="section clearfix  n-motion n-top">
+						<div class="clearfix pt30 pb30">
+							<div class="main-cont01">
+								<h2 class="main-title"><span>사업분야</span></h2>
+								<div class="link-list pt10">
+									<ul class="clear clearfix">
+										<li><a href=""><span class="icon link-1"><strong>산업기계</strong></span></a></li>
+										<li><a href=""><span class="icon link-2"><strong>환경사업</strong></span></a></li>
+										<li><a href=""><span class="icon link-3"><strong>유지보수</strong></span></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="main-cont02">
+								<h2 class="main-title"><span>납품실적&주요거래선</span></h2>
+								<div class="project-list pt10">
+									<ul class="clear">
+										<li><a href=""><span class="cont ellipsis">Yoochon Water Purification plant</span><span class="etc">5HP*1/29</span></a></li>
+										<li><a href=""><span class="cont ellipsis">Namyangjoo Water Purification plant</span><span class="etc">2HP*1/87</span></a></li>
+										<li><a href=""><span class="cont ellipsis">Buchon Waste Management plant</span><span class="etc">3HP*1/87</span></a></li>
+										<li><a href=""><span class="cont ellipsis">Donghae Water Purification plant</span><span class="etc">1HP*360RPM</span></a></li>
+										<li><a href=""><span class="cont ellipsis">Kuri Environment office</span><span class="etc">20HP*1/29</span></a></li>
+										<li><a href=""><span class="cont ellipsis">SPECO plant</span><span class="etc">1/289외</span></a></li>
+										<li><a href=""><span class="cont ellipsis">Soonchon Waste Management plantz</span><span class="etc">15HP</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //main-section01 -->
+				<!-- main-section02 -->
+				<div class="main-section02 main-section ">
+					<div class="section pt30 pb30 n-motion n-top">
+						<h2 class="main-title pb10"><span>갤러리</span></h2>
+						<div class="gallery-main-list" id="gallery-main-list">
+							<div>
+								<div class="inner">
+									<a href="" class="link"><span class="skip">바로가기</span></a>
+									<div class="img"><img src="/public/images/main/gallery-list01.png" alt="" /></div>
+									<div class="info"><span class="tit">UTNI and responsible for commercial promotion</span><span class="date">2019-03-22</span></div>
+								</div>
+							</div>
+							<div>
+								<div class="inner">
+									<a href="" class="link"><span class="skip">바로가기</span></a>
+									<div class="img"><img src="/public/images/main/gallery-list02.png" alt="" /></div>
+									<div class="info"><span class="tit">UTNI and responsible for commercial promotion</span><span class="date">2019-03-22</span></div>
+								</div>
+							</div>
+							<div>
+								<div class="inner">
+									<a href="" class="link"><span class="skip">바로가기</span></a>
+									<div class="img"><img src="/public/images/main/gallery-list03.png" alt="" /></div>
+									<div class="info"><span class="tit">UTNI and responsible for commercial promotion</span><span class="date">2019-03-22</span></div>
+								</div>
+							</div>
+							<div>
+								<div class="inner">
+									<a href="" class="link"><span class="skip">바로가기</span></a>
+									<div class="img"><img src="/public/images/main/gallery-list04.png" alt="" /></div>
+									<div class="info"><span class="tit">UTNI and responsible for commercial promotion</span><span class="date">2019-03-22</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //main-section02 -->
+			</div>
+		</div>
+		<!-- //container 본문-->
+		<hr>
+		<!-- footer 하단 -->
+		<div class="footer-area">
+			<div class="section">
+			<footer class="footer" id="footer">
+				<!-- footer-total-area -->
+				<div class="footer-total-area">
+					<div class="section">
+						<div class="footer-logo"><%=title%></div>
+						<!-- footer-gnb -->
+						<div class="footer-gnb">
+							<ul class="clear clearfix">
+								<li><a href=""><span>위치정보 이용약관</span></a></li>
+								<li><a href=""><span>오시는 길</span></a></li>
+								<li><a href=""><span>사이트맵</span></a></li>
+							</ul>
+						</div>
+						<!-- //footer-gnb -->
+						<div class="footer-address pt10">
+							<address>
+							<p><span>(주)협동사이크로</span></p>
+							<p><span>대표 : 변용식  </span><span>사업자등록번호 : 128-81-2000000</span></p>
+							<p><span>주소 : 10212 경기 고양시 일산서구 송포백송길 9-6 </span><span>대표전화 : 031-916-5100 </span><span>Fax : 031-916-5105 </span><span>E-mail : hdcyclo@hanmail.net </span></p>
+							<p><span class="copyright">Copyright (C) 2019 HYUP DONG CYCLO Co., Ltd.. All Rights Reserved.</span></p>
+							</address>
+						</div>
+					</div>
+				</div>
+				<!-- //footer-total-area -->
+			</footer>
+			</div>
+		</div>
+		<!-- //footer 하단 -->
+	</div>
+	<!-- ux 관련 스크립트 -->
+	<script src="/public/js/ux.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			ux.main();
+		});
+	</script>
+</body>
+</html>
