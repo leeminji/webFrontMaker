@@ -4,6 +4,7 @@
   "description": "MJ",
   "main": "index.js",
   "scripts": {
+    "output" : "node output.js", 
     "start": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,5 +15,7 @@
     "express": "^4.16.4",
     "nodemon": "^1.18.10"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
 }

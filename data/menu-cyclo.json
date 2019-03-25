@@ -1,8 +1,8 @@
 {
 	"all" : [
-		{"code": "100", "name" : "회사소개", "link":"/company"},
-		{"code": "200", "name" : "사업분야", "link":"/business"},
-		{"code": "300", "name" : "납품실적&주요거래선", "link":"/process"},
-		{"code": "400", "name" : "갤러리", "link":"/gallery"}
+		{"code": "100", "name" : "COMPANY", "link":"/company"},
+		{"code": "200", "name" : "BUSINESS", "link":"/business"},
+		{"code": "300", "name" : "PERFORMANCE", "link":"/performance"},
+		{"code": "400", "name" : "GALLERY", "link":"/gallery"}
 	]
 }

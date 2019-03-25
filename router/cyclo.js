@@ -10,23 +10,35 @@ router.get("/", function(req, res){
 });
 
 router.get('/company', function (req, res) {
-	console.log( "TEST!");
-	res.send("MENU");
+	var config = req.app.get('config');
+	res.render('cyclo/company', {
+		title: config.name,
+		menu : config.menu
+	});
 });
 
 router.get('/business', function (req, res) {
-	console.log( "TEST!");
-	res.send("MENU");
+	var config = req.app.get('config');
+	res.render('cyclo/business', {
+		title: config.name,
+		menu : config.menu
+	});
 });
 
-router.get('/process', function (req, res) {
-	console.log( "TEST!");
-	res.send("MENU");
+router.get('/performance', function (req, res) {
+	var config = req.app.get('config');
+	res.render('cyclo/performance', {
+		title: config.name,
+		menu : config.menu
+	});
 });
 
 router.get('/gallery', function (req, res) {
-	console.log( "TEST!");
-	res.send("MENU");
+	var config = req.app.get('config');
+	res.render('cyclo/gallery', {
+		title: config.name,
+		menu : config.menu
+	});
 });
 
 module.exports = router;

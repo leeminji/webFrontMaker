@@ -25,7 +25,7 @@
 	body, a, input, button, select, p,h1,h2,h3,h4,h5,h6,textarea,select{font-weight:400;font-family:"NotoSansKR",'Nanum Gothic','나눔 고딕','Malgun Gothic','돋움','sans-serif';font-size:1em;line-height:1.2em;color:#666666;}
 	span, strong{line-height: 1em}
 	table{width:100%;table-layout:fixed;border-collapse: collapse;border-spacing: 0;}
-	caption, legend {width:0;height:0;font-size:0;line-height:0;overflow:hidden}
+	legend {width:0;height:0;font-size:0;line-height:0;overflow:hidden}
 	address,em{font-style:normal}
 	img,fieldset,iframe{border:0;padding:0;margin:0}
 	img,input,select,button,textarea{vertical-align:middle;}
@@ -337,38 +337,45 @@
 	}
 	
 	/* text-area */
-	.text-area p{color:#666666;line-height:1.6em;}
-	.text-area li{color:#666666;line-height:1.6em;}
+	.text-area p{color:#666666;}
+	.text-area li{color:#666666;}
 
-	.text-area .text_right{text-align:right}
-	.text-area .text_left{text-align:left}
-	.text-area .text_center{text-align:center}
+	.text-area.lh16 p{line-height:1.6em}
+	.text-area.lh18 p{line-height:1.8em}
+	.text-area.lh20 p{line-height:2em}
+
+	.text-area .text-right{text-align:right}
+	.text-area .text-left{text-align:left}
+	.text-area .text-center{text-align:center}
+
 	.text-area .c_blue{color:#357ecf}
 	.text-area .c_black{color:#000}
 	.text-area .c_red{color:#db0000}
-	.text-area .c_gray{color:#5a5a5a}
+	.text-area .c_gray{color:#999999}
 	.text-area .c_dark_blue{color:#087aa3}
 	.text-area .c_purple{color:#6674e3}
 	.text-area .c_pink{color:#e57e7a}
 	.text-area .f_normal{font-weight:normal}
 	.text-area .f_bold{font-weight:bold}
+	.text-area .t_upper{text-transform:uppercase}
 
-	.text-area .text48{font-size:3em;line-height:1.3em}
-	.text-area .text42{font-size:2.65em;line-height:1.3em}
-	.text-area .text36{font-size:2.25em;line-height:1.3em}
-	.text-area .text30{font-size:1.875em;line-height:1.3em}
-	.text-area .text28{font-size:1.75em;line-height:1.3em}
-	.text-area .text24{font-size:1.5em;line-height:1.3em}
-	.text-area .text20{font-size:1.25em;line-height:1.3em}
-	.text-area .text18{font-size:1.125em;line-height:1.3em}
-	.text-area .text14{font-size:0.875em;line-height:1.3em}
-	.text-area .text15{font-size:0.9375em;line-height:1.3em}
+	.text-area .text48{font-size:3em;}
+	.text-area .text42{font-size:2.65em;}
+	.text-area .text36{font-size:2.25em;}
+	.text-area .text30{font-size:1.875em;}
+	.text-area .text28{font-size:1.75em;}
+	.text-area .text24{font-size:1.5em;}
+	.text-area .text20{font-size:1.25em;}
+	.text-area .text18{font-size:1.125em;}
+	.text-area .text14{font-size:0.875em;}
+	.text-area .text15{font-size:0.9375em;}
 	.text-area .ls1{letter-spacing:-1px}
 	.text-area .ls2{letter-spacing:-2px}
 
-	.img-area.center{text-align:center}
-	.img-area.left{text-align:left}
-	.img-area.right{text-align:right}	
+	.img-area.img-center{text-align:center}
+	.img-area.img-left{text-align:left}
+	.img-area.img-right{text-align:right}
+	.img-area img{max-width:100%}
 
 	/* tab */
 	div[class^="tab_"].col-3 > ul > li{width:33.3%}
