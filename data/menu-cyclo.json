@@ -4,5 +4,9 @@
 		{"code": "200", "name" : "BUSINESS", "link":"/business"},
 		{"code": "300", "name" : "PERFORMANCE", "link":"/performance"},
 		{"code": "400", "name" : "GALLERY", "link":"/gallery"}
+	],
+	"menu01" : [
+		{"code": "100100", "name" : "INTRODUCTION", "link":"/company/introduction"},
+		{"code": "100200", "name" : "LOCATION", "link":"/company/location"}
 	]
 }

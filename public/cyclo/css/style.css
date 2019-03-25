@@ -29,6 +29,7 @@ body.no{overflow:hidden}
 	.main-gnb ul > li.on > a > span{font-weight:bold;}
 	.main-gnb ul > li > a:after{content:'';position:absolute;margin:0 auto;width:0;left:0;right:0;bottom:0;height:2px;background:#fff;transition:width .5s;-webkit-transition:width .5s}
 	.main-gnb ul > li:hover > a:after{width:1em;transition:width .5s;-webkit-transition:width .5s}
+	.main-gnb ul ul{display:none}
 
 /* visual-area */
 	.visual-area .visual-text{position: absolute;z-index:100;left:5em;right:5em;top:50%;margin-top:-6em;}

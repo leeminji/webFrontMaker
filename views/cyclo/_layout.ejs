@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<%- include('_include/head'); %>
+</head>
+<body>
+	<%- include('_include/header'); %>
+	<hr />
+	<!-- container 본문 -->
+	<div class="container-area">
+		<% if(page){ %>
+		<%- include(page); %>
+		<% }else{ %>
+			준비중입니다.
+		<% } %>
+	</div>
+	<!-- //container 본문-->
+	<hr>
+	<%- include('_include/footer'); %>
+	<%- include('_include/tail'); %>
+</body>
+</html>

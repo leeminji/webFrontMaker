@@ -4,16 +4,20 @@
   "description": "MJ",
   "main": "index.js",
   "scripts": {
-    "output" : "node output.js", 
+    "output": "node output.js",
     "start": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cheerio-httpcli": "^0.7.4",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "nodemon": "^1.18.10"
+    "fs-extra": "^7.0.1",
+    "ngrok": "^3.1.1",
+    "nodemon": "^1.18.10",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "node-sass": "^4.11.0"

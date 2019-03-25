@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<% include ./_include/head %>
+	<%- include('_include/head'); %>
 </head>
 <body>
-	<% include ./_include/header %>
+	<%- include('_include/header'); %>
 	<!-- visual-area -->
 	<div class="visual-area main-section">
 		<!-- bxslider plugin 적용 -->
@@ -60,9 +60,9 @@
 							<h2 class="main-title"><span>사업분야</span></h2>
 							<div class="link-list pt10">
 								<ul class="clear clearfix">
-									<li><a href="/business/#sub01"><span class="icon link-1"><strong>산업기계</strong></span></a></li>
-									<li><a href="/business/#sub02"><span class="icon link-2"><strong>환경사업</strong></span></a></li>
-									<li><a href="/business/#sub03"><span class="icon link-3"><strong>유지보수</strong></span></a></li>
+									<li><a href="/business#sub01"><span class="icon link-1"><strong>산업기계</strong></span></a></li>
+									<li><a href="/business#sub02"><span class="icon link-2"><strong>환경사업</strong></span></a></li>
+									<li><a href="/business#sub03"><span class="icon link-3"><strong>유지보수</strong></span></a></li>
 								</ul>
 							</div>
 						</div>
@@ -125,7 +125,7 @@
 	</div>
 	<!-- //container 본문-->
 	<hr>
-	<% include ./_include/footer %>
-	<% include ./_include/tail %>
+	<%- include('_include/footer'); %>
+	<%- include('_include/tail'); %>
 </body>
 </html>
