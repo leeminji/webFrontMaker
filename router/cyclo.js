@@ -12,10 +12,9 @@ router.get("/test", function(req, res){
 
 router.get("/", function(req, res){
 	var config = req.app.get('config');
-	res.render('cyclo/_layout', {
+	res.render('cyclo/_main', {
 		title: config.name,
-		menu : config.menu,
-		page : 'main/main'
+		menu : config.menu
 	});
 });
 

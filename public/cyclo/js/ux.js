@@ -47,10 +47,6 @@ var ux = (function(){
 		//메인
 		main : function(){
 			var objThis = this;
-			var tline = new TimelineLite({
-				onComplete : function(){
-				}
-			});
 
 			//메인슬라이드
 			var mainVisual = $('#main-visual').bxSlider({
@@ -91,21 +87,7 @@ var ux = (function(){
 				slidesToShow: 4,
 				slidesToScroll: 1,
 				autoplay: true,
-				autoplaySpeed: 2000,
-				responsive : [
-					{
-						breakpoint : 1024,
-						settings : {
-							slidesToShow : 3 
-						}
-					},
-					{
-						breakpoint : 768,
-						settings : {
-							slidesToShow : 2 
-						}
-					}
-				]
+				autoplaySpeed: 2000
 			});
 		},
 		mainGnb : function(){

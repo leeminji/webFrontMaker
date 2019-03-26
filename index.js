@@ -4,6 +4,7 @@ var app = express();
 var router = express.Router();
 var fs = require("fs");
 var ux = require("./lib/ux"); //UX 라이브러리
+var config = require("./config"); //설정
 
 //메인라우터
 var routerMain = require('./router/main');

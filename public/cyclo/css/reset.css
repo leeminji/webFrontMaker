@@ -1,10 +1,11 @@
 @charset "utf-8";
-/* 본고딕 */
+
+/*  
 @font-face {
 	font-family: "NotoSansKR";
 	font-style: normal;
 	font-weight: normal;
-	src: local(※), local(NotoSansKR), local('Noto Sans KR');
+	src: local(＠), local(NotoSansKR), local('Noto Sans KR');
 	src: url('../fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
 		 url('../fonts/NotoSansKR-Regular.woff') format('woff'),
 		 url('../fonts/NotoSansKR-Regular.woff2') format('woff2'),
@@ -14,15 +15,24 @@
 	font-family: "NotoSansKR";
 	font-style: normal;
 	font-weight: bold;
-	src: local(※), local(NotoSansKR), local('Noto Sans KR');
+	src: local(＠), local(NotoSansKR), local('Noto Sans KR');
 	src: url('../fonts/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
 		 url('../fonts/NotoSansKR-Bold.woff') format('woff'),
 		 url('../fonts/NotoSansKR-Bold.woff2') format('woff2'),
 		 url('../fonts/NotoSansKR-Bold.ttf') format('truetype');
 }
+*/
+
+/* google webfont  */
+/*
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css) "Noto Sans KR",;
+*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 /**** reset.css ****/
 	html,body, div,p,h1,h2,h3,h4,h5,h6,input,button,textarea,select,table,ul,ol,li,dl,dt,dd,label,a,strong{margin:0;padding:0;}
-	body, a, input, button, select, p,h1,h2,h3,h4,h5,h6,textarea,select{font-weight:400;font-family:"NotoSansKR",'Nanum Gothic','나눔 고딕','Malgun Gothic','돋움','sans-serif';font-size:1em;line-height:1.2em;color:#666666;}
+	body, a, input, button, select, p,h1,h2,h3,h4,h5,h6,textarea,select{font-weight:400;font-family:'Nanum Gothic','나눔고딕','Malgun Gothic','맑은고딕','sans-serif';font-size:1em;line-height:1.2em;color:#666666;}
 	span, strong{line-height: 1em}
 	table{width:100%;table-layout:fixed;border-collapse: collapse;border-spacing: 0;}
 	legend {width:0;height:0;font-size:0;line-height:0;overflow:hidden}
@@ -79,7 +89,7 @@
 	input::-ms-input-placeholder { color: #d6d0db;}
 	input::-moz-placeholder { color: #d6d0db;}
 
-	input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"]{-webkit-appearance: none;-moz-appearance: none;appearance: none;border-radius: 0px;} /* 모바일 라운드 제거 */
+	input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"]{-webkit-appearance: none;-moz-appearance: none;appearance: none;border-radius: 0px;} /* ����� ���� ���� */
 
 	textarea{display:block;border:1px solid #cbcbcb;padding:0.4em;box-sizing:content-box}
 	textarea[size="100"]{width:98%}
@@ -98,7 +108,7 @@
 	select[width="30"]{width:30em}
 
 
-/* 공통요소 */
+/* ������ */
 	.m_data{display:none !important;}
 	.pc_data{display:block !important;}
 	.break{word-break:break-all;}

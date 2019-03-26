@@ -11,7 +11,7 @@ body.no{overflow:hidden}
 .section{width:62em;margin:0 auto;position:relative;}
 .container{overflow:hidden;}
 .blind{display:none;position:absolute;z-index:1000;left:0;top:0;right:0;bottom:0;background:url(../images/common/bg_black50.png)}
-.loading{text-indent:-999px;overflow:hidden;width: 100%;height: 100%;top: 0;left: 0;position: fixed; background: #fff url(../images/common/ajax-loader.gif) center no-repeat; z-index: 1000;}
+.loading{text-indent:-999px;overflow:hidden;width: 100%;height: 100%;top: 0;left: 0;position: fixed; background:#fff url(../images/common/ajax-loader.gif) center no-repeat; z-index: 1000;}
 
 /* header */
 	.header{position: absolute;z-index:100;left:0;right:0;top:2em}
@@ -47,11 +47,13 @@ body.no{overflow:hidden}
 	.visual-area .bx-pager a{overflow:hidden;display:block;width:1em;height:1.5em;text-indent:-99999px;background-image:url(../images/common/off.png);background-size:auto 1em;background-repeat: no-repeat;background-position: center}
 	.visual-area .bx-pager a.active{background-image:url(../images/common/on.png)}
 	.visual-area .bx-loading {min-height: 50px;background: url(../images/common/ajax-loader.gif) center center no-repeat #fff;height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
-	.visual-area .bx-controls-direction a{position:absolute;top:50%;height:3em;margin-top:-1.5em;width:3em;text-align:left;overflow:hidden;text-indent:-9999px}
+	.visual-area .bx-controls{position:relative;z-index:2000}
+	.visual-area .bx-controls-direction a{position:absolute;z-index:1000;top:50%;height:3em;margin-top:-1.5em;width:3em;text-align:left;overflow:hidden;text-indent:-9999px}
 	.visual-area .bx-controls-direction a.bx-prev{left:0}
 	.visual-area .bx-controls-direction a.bx-next{right:0}
 	.visual-area .bx-controls-direction a:hover{-webkit-transition: all .5s; /* Safari */transition: all .5s;}
 	.visual-area .bx-wrapper .bx-viewport {
+		position:relative;z-index:10;
 		-webkit-transform: translatez(0);
 		-moz-transform: translatez(0);
 		-ms-transform: translatez(0);
@@ -81,7 +83,7 @@ body.no{overflow:hidden}
 	.link-list ul li strong{display:block;font-weight:normal;text-align:center;padding-top:1em;}
 
 	.project-list ul li{position:relative;padding-left:1em;margin:.2em 0}
-	.project-list ul li:before{position:absolute;left:0;top:50%;content:'·';line-height:1em;margin-top:-.5em}
+	.project-list ul li:before{position:absolute;left:0;top:50%;content:'.';line-height:1em;margin-top:-.8em}
 	.project-list ul li a{display:block;position:relative;color:#929292}
 	.project-list ul li a span{display:block;font-size:0.87em;}
 	.project-list ul li a span.cont{padding-right:8em;padding-top:.3em;padding-bottom:.3em}
@@ -97,28 +99,30 @@ body.no{overflow:hidden}
 	.gallery-main-list .inner:hover .link{background:none}
 	.gallery-main-list .inner img{width:100%;transition:all .5s 0s;-webkit-transition:all .5s 0s}
 	.gallery-main-list .inner .info{transition:all .5s 0s;-webkit-transition:all .5s 0s;transform:translateY(-12em);position:absolute;z-index:90;left:2em;right:2em;top:50%;margin-top:-4em;height:8em}
-	.gallery-main-list .inner:hover .info{transform:translateY(0em);transition:all .5s 0s;-webkit-transition:all .5s 0s}
+	.gallery-main-list .inner:hover .info, .gallery-main-list .inner:focus .info{transform:translateY(0em);transition:all .5s 0s;-webkit-transition:all .5s 0s}
 	.gallery-main-list .inner .info span{display:block;color:#fff;text-align:center}
 	.gallery-main-list .inner .info .tit{font-size:1.2em}
 	.gallery-main-list .inner .info .date{position:absolute;z-index:90;left:0;right:0;bottom:0}
 	.gallery-main-list .inner .info .date:after{content:'';position:absolute;z-index:90;left:50%;width:2em;margin-left:-1em;top:-1em;height:1px;background:#fff}
 
 /* footer */
-	.footer-area{padding:2em 0;background:#000}
-	.footer-logo{display:block;text-indent:-999px;overflow:hidden;position:absolute;right:0;top:50%;height:4em;width:4em;margin-top:-2em;background:url(../images/common/f-logo.png) no-repeat;}
-	.footer-gnb{}
-	.footer-gnb > ul > li{display:inline-block;*display:inline;padding-left:1em;border-left:1px solid #fff;margin-right:.5em}
+	.footer-area{padding:1em 0 5em;background:#191919}
+	.footer-logo{display:block;text-indent:-999px;overflow:hidden;position:absolute;right:0;top:50%;height:5em;width:7em;margin-top:-2.5em;background:url(../images/common/f-logo.png?v=1) no-repeat;}
+	.footer-gnb{display:none}
+	.footer-gnb > ul > li{position:relative;display:inline-block;*display:inline;padding-left:1em;margin-right:.5em}
+	.footer-gnb > ul > li:after{content:'';display:block;position:absolute;left:0;height:.8em;margin-top:-.4em;top:50%;width:1px;background:#fff;}
 	.footer-gnb > ul > li:first-child{padding-left:0;border-left:0}
+	.footer-gnb > ul > li:first-child:after{display:none;}
 	.footer-gnb > ul > li > a{display:block;color:#fff;font-size:0.8em} 
 	.footer-gnb > ul > li > ul{padding-top:2em}
 	.footer-gnb > ul > li > ul > li{padding-bottom:.8em;}
 	.footer-gnb > ul > li > ul > li > a{display:block;color:#838b8c;font-size:0.81em;text-transform: uppercase;}
 	.footer-gnb > ul > li > ul > li:hover > a{color:#000}
+	.footer-gnb > ul > li > a span{vertical-align: baseline;}
 
 	.footer-address{}
 	.footer-address address{}
 	.footer-address address span{display:inline-block;line-height:1.8em;padding-right:.5em;color:#fff;font-size:0.7em;}
-
 
 /* subpage */
 	/* content-title */
@@ -130,15 +134,14 @@ body.no{overflow:hidden}
 	/* content-visual-top */
 	.content-visual-top{overflow:hidden;height:16.25em;position: relative;}
 	.content-visual-top img{height:16.25em;position:absolute;left:50%;top:0;-webkit-transform: translateX(-50%);transform: translateX(-50%);}
-	
+	.ie8 .content-visual-top img{margin-left:-50%}
+
 	/* content-path */
 	.content-path{border-bottom:1px solid #e2e2e2}
 	.content-path ul li{float:left;padding:1em 0}
-	.content-path ul li a{color:#c7c7c7;font-size:0.75em}
-	.content-path ul li strong{color:#858585;font-size:0.75em;font-weight:normal;}
-	.content-path ul li a:before{content:'';vertical-align:middle;background:url(../images/common/deco-path-01.png) center no-repeat;width:1em;height:1em;display:inline-block} 
-	.content-path ul li strong:before{content:'';vertical-align:middle;background:url(../images/common/deco-path-02.png) center no-repeat;width:1em;height:1em;display:inline-block}
-	.content-path ul li:first-child a:before{display:none}
+	.content-path ul li a{line-height: 1.5em;display:block;padding-left:1em;background:url(../images/common/deco-path-01.png) left 50% no-repeat;color:#c7c7c7;font-size:0.8em;vertical-align: baseline;}
+	.content-path ul li strong{line-height: 1.5em;display:block;padding-left:1em;background:url(../images/common/deco-path-02.png) left 50% no-repeat;color:#858585;font-size:0.8em;font-weight:normal}
+	.content-path ul li:first-child a{background:none;padding-left:0}
 
 	/* img-section */
 	.img-section-01{position:relative;overflow:hidden}
@@ -160,6 +163,20 @@ body.no{overflow:hidden}
 	.img-section-03 .col-all .col{float:left;width:25%;overflow:hidden;margin-top:-1px;margin-left:-1px}
 	.img-section-03 .col-all .col span{text-align:center;display:block;border:1px solid #fff;}
 	.img-section-03 .col-all .col img{height:10em;}
+
+	/* history-area */
+	.history-area ol{margin-right:-6em;overflow:hidden;text-align: center;position: relative;}	
+	.history-area ol:after{z-index:1;content:'';display:block;position: absolute;left:0;top:2em;right:8em;height:1px;background:#c7c7c7}
+	.history-area ol li{position:relative;z-index:10;text-align: left;float:left;width:25%}
+	.history-area ol li .year{margin-left:-.5em;background:#fff;display:inline-block;padding:0 .5em}
+	.history-area ol li .year span{color:#51bbda;font-weight: 900;font-size:3.75em;letter-spacing:0}
+	.history-area ol li .info{padding-top:1.5em;padding-right:3em}	
+	.history-area ol li .info p{color:#666666;line-height: 2em;letter-spacing:-1px}
+
+	/* address-area */
+	.address-area ul li{margin-bottom:.8em;float:left;width:50%;position: relative;line-height: 1.2em}
+	.address-area ul li .tit{position: absolute;left:0;line-height:1.2em;width:6em;top:0;color:#336699}
+	.address-area ul li .txt{display: block;padding-left:6em}
 
 	/* table */
 	.tbl-A{position:relative;}

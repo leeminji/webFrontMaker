@@ -4,7 +4,7 @@ var request = require('request');
 var fs = require('fs');
 var path = require('path');
 var fsExtra = require("fs-extra"); 
-
+var output = require("./lib/output");
 //공통설정
 var LINK_LEVEL = 3;
 
@@ -15,6 +15,10 @@ var list = {};
 //output 프로젝트가 없으면 생성.
 var PROJECT_NAME = "cyclo";
 var output_folder = __dirname+"\\output\\"+PROJECT_NAME;
+
+if( !fs.existsSync(__dirname+"\\output") ){
+	fs.mkdirSync(__dirname+"\\output");
+}
 
 if( !fs.existsSync(output_folder) ){
 	fs.mkdirSync(output_folder);

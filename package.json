@@ -6,7 +6,7 @@
   "scripts": {
     "output": "node output.js",
     "start": "nodemon ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "author": "",
   "license": "ISC",
