@@ -125,11 +125,17 @@ body.no{overflow:hidden}
 	.footer-address address span{display:inline-block;line-height:1.8em;padding-right:.5em;color:#fff;font-size:0.7em;}
 
 /* subpage */
+
 	/* content-title */
-	.content-title-01{padding-top:4em;padding-bottom:2em}
+	.content-title-01{padding-top:4em;}
 	.content-title-01 span{font-size:1.9em;color:#2f2f2f;font-weight:bold;text-transform:uppercase}
-	.content-title-02 span{font-size:1.6em;color:#2f2f2f;font-weight:bold;text-transform:uppercase}
+	.content-title-02 span{font-size:1.5em;color:#2f2f2f;font-weight:bold;text-transform:capitalize;}
 	.content-title-03 span{font-size:1.2em;color:#2f2f2f;text-transform:uppercase}
+	.content-title-01-text{padding-top:.5em}
+	.content-title-01-text span{font-size:0.9em;color:#bdbdbd;}
+
+	.blit {position:relative;padding-left:1em;}
+	.blit:after{position:absolute;left:0;top:50%;margin-top:-0.6em;content:'';display:block;height:1.2em;width:7px;background:#56a2ce}
 
 	/* content-visual-top */
 	.content-visual-top{overflow:hidden;height:16.25em;position: relative;}
@@ -182,7 +188,20 @@ body.no{overflow:hidden}
 	.tbl-A{position:relative;}
 	.tbl-A table{font-size:0.95em}
 	.tbl-A table caption{position:absolute;left:0;top:-3em;font-size:1em;color:#717171;display:block;padding:1em 0}
-	.tbl-A table thead th{background:#c8c8c8;color:#fff;padding:.8em 0;font-weight:normal}
-	.tbl-A table tbody td{border-bottom:1px solid #c8c8c8;padding:1em .5em}
+	.tbl-A table thead th{background:#5a5a5a;color:#fff;padding:.8em 0;font-weight:normal}
+	.tbl-A table tbody td{border-bottom:1px solid #f1f1f1;padding:1em 1.5em}
 	.tbl-A table tbody td.center{text-align:center}
+	.tbl-A table tbody tr td:first-child{text-align:center;background:#2990cb;color:#fff}
 	.tbl-upper table td{text-transform:uppercase}
+
+	/* galleryList */
+	.galleryList ul{margin-left:-0.5em}
+	.galleryList ul li{float:left;width:25%;}
+	.galleryList ul li .inner{position:relative;margin-left:.5em;overflow:hidden;border:1px solid #dcdcdc}
+	.galleryList ul li .link{position:absolute;right:0;top:0;bottom:0;left:0}
+	.galleryList ul li .img{height:150px;overflow:hidden}
+	.galleryList ul li .img img{height:100%}
+	.galleryList ul li .info{padding:1em 0}
+	.galleryList ul li .info span{display:block;text-align:center}
+	.galleryList ul li .info span.title{color:#000;font-size:1.1em;font-weight:bold;padding-bottom:2px}
+	.galleryList ul li .info span.etc{height:2.4em;line-height:1.2em;font-size:0.9em;color:#666666}

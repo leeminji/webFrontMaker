@@ -17,10 +17,76 @@
 			<div class="content" id="content">
 				<div class="section">
 					<h2 class="content-title-01"><span>GALLERY</span></h2>
-					<p>준비중입니다.</p>
+					<p class="content-title-01-text"><span>협통피엘티는 전력 및 에너지 산업 분야의 고객에게 혁신적인 솔루션을 제공합니다.</span></p>
+
+					<div class="galleryList pt40" id="galleryList">
+						<ul class="clearfix clear">
+							<li>
+								<div class="inner">
+									<a href="" class="link"><span class="skip">갤러리보기</span></a>
+									<div class="img">
+										<img src="/public/images/gallery/01/ga01-img01.jpg" alt="" />
+									</div>
+									<div class="info">
+										<span class="title">Sand Plant</span>
+										<span class="etc">(Decanter, Agitator, Reducer)</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="inner">
+									<a href="" class="link"><span class="skip">갤러리보기</span></a>
+									<div class="img">
+										<img src="/public/images/gallery/02/ga02-img01.jpg" alt="" />
+									</div>
+									<div class="info">
+										<span class="title">Chemical Tank</span>
+										<span class="etc">(Tank, Agitator, Reducer)</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="inner">
+									<a href="" class="link"><span class="skip">갤러리보기</span></a>
+									<div class="img">
+										<img src="/public/images/gallery/03/ga03-img01.jpg" alt="" />
+									</div>
+									<div class="info">
+										<span class="title">Steel Plant</span>
+										<span class="etc">(Tokyo Steel)</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="inner">
+									<a href="" class="link"><span class="skip">갤러리보기</span></a>
+									<div class="img">
+										<img src="/public/images/gallery/04/ga04-img01.jpg" alt="" />
+									</div>
+									<div class="info">
+										<span class="title">Power Plant</span>
+										<span class="etc">(Ash handling system project_Inspection)</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<!-- //content -->
 		</div>
 	</div>
 	<!-- //container 본문-->
+
+	<script type="text/javascript">
+		var galleryList = $("#galleryList");
+		$.event.add(window,"load",function(){
+			galleryList.children().children("li").each(function(){
+				var img = $(this).find('img');
+				var frame = img.parent();
+				if( img.width() < frame.width() ){
+					img.width(frame.width());
+				}
+			});
+		});
+	</script>
