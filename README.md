@@ -23,3 +23,6 @@ ngrok http 3000 //외부포트생성
 <pre><code>npm run output</code></pre>
 
 > 사이트 전체 다운로드
+
+## 모듈
+<pre><code>grunt-contrib-imagemin //이미지 사이즈줄이기</code></pre>

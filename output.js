@@ -4,7 +4,8 @@ var request = require('request');
 var fs = require('fs');
 var path = require('path');
 var fsExtra = require("fs-extra"); 
-var output = require("./lib/output");
+
+
 //공통설정
 var LINK_LEVEL = 3;
 
