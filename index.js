@@ -4,21 +4,22 @@ var app = express();
 var router = express.Router();
 var fs = require("fs");
 var ux = require("./lib/ux"); //UX 라이브러리
-var config = require("./config"); //설정
+var config = require("./iccv-config"); //설정
 
 //메인라우터
 var routerMain = require('./router/main');
-var routerCyclo = require("./router/cyclo");
+//var routerCyclo = require("./router/cyclo");
+var routerIccv = require("./router/iccv");
 
 var config = {
-	"menuJSON" : "menu-cyclo.json",
-	"name" : "(주)협동사이크로",
+	"menuJSON" : "menu-iccv.json",
+	"name" : "ICCV",
 };
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
-app.use('/public', express.static('public/cyclo'));
+app.use('/public', express.static('public/iccv'));
 app.use(express.static('data'));
 
 app.listen(3000, function () {
@@ -42,5 +43,5 @@ var configMenu = function (req, res, next) {
 
 app.use(configMenu);
 //app.use('/', routerMain); //메인라우터
-app.use('/', routerCyclo); //메인라우터
+app.use('/', routerIccv); //메인라우터
 

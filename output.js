@@ -14,7 +14,7 @@ var TARGET_URL = "http://localhost:3000/";
 var list = {};
 
 //output 프로젝트가 없으면 생성.
-var PROJECT_NAME = "cyclo";
+var PROJECT_NAME = "ICCV";
 var output_folder = __dirname+"\\output\\"+PROJECT_NAME;
 
 if( !fs.existsSync(__dirname+"\\output") ){
