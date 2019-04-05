@@ -205,3 +205,21 @@ body.no{overflow:hidden}
 	.galleryList ul li .info span{display:block;text-align:center}
 	.galleryList ul li .info span.title{color:#000;font-size:1.1em;font-weight:bold;padding-bottom:2px}
 	.galleryList ul li .info span.etc{height:2.4em;line-height:1.2em;font-size:0.9em;color:#666666}
+
+	/* galleryView */
+	.galleryView{}
+	.galleryView-top{position:relative;padding:.8em 0;color:#666666;border-top:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc}
+	.galleryView-top .txt{padding-left:12em;}
+	.galleryView-top .txt span{font-size:0.9em}
+	.galleryView-top .title{position:absolute;left:0;top:0;bottom:0;width:10em;background:#f7f7f7;text-align:center}
+	.galleryView-top .title span{font-weight:bold;display:block;position:absolute;left:0;right:0;text-align:center;top:50%;font-size:0.9em;line-height:1em;margin-top:-.5em;color:#000}
+	.galleryView-body .inner{padding:3em;text-align:center}
+	.galleryView-body .inner img{max-width:100%;}
+
+	.galleryView-bottom{border-top:1px solid #dcdcdc;padding-top:1em}
+	.galleryView-bottom.right{text-align:right}
+
+	a[class^='btn-']{display:inline-block;text-align:center;transition:all 1s;}
+	a[class^='btn-']:hover{transition:all 1s;}
+	.btn-A{background:#666666;color:#fff;border-radius:3px;width:5.5em;line-height:2em}
+	.btn-A:hover{color:#fff;background:#000}

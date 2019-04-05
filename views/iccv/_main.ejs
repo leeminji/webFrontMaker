@@ -1,15 +1,112 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-	<%- include('_include/head'); %>
-</head>
-<body>
-	<%- include('_include/header'); %>
-	<hr />
+<section class="section">
 
-	<hr>
-	<%- include('_include/footer'); %>
+	<!-- login -->
+	<div class="login-module pt20 ">
+		<h2 class="main-title b_line"><span>Log-in</span></h2>
+		<div class="inner pt20 b_line_gray">
+			<div class="login-sign">
+				<p class="text"><span>If this is your first visit, please click the button</span></p>
+				<a href="/register" class="btn-signup"><span>Sign up</span></a>
+			</div>
+			<div class="login-form mt5 pb10">
+				<div class="login-form-id"><label for="userId" class="skip">아이디</label><input type="text" id="userId" placeholder="Please Enter ID (E-mail Address)" name=""></div>
+				<div class="login-form-pw pt5"><label for="userPw" class="skip">패스워드</label><input type="text" placeholder="Please Enter Password" name="userPw" id="userPw"></div>
+				<a href="" class="btn-login"><span>Login</span></a>
+			</div>		
+		</div>	
+	</div>
+	<!-- //login -->
 
-	<%- include('_include/tail'); %>
-</body>
-</html>
+	<!-- find -->
+	<div class="find-module pt20 text-area pb40">
+		<h2 class="main-title b_line"><span>Find ID & Password</span></h2>
+		<div class="pt20"><p class="text14 c_black text-center">If you have forgotten your user ID or Password, please click one of the buttons below.</p></div>
+		<div class="text-center pt10">
+			<a href="" class="btn-middle btn-A"><span>Find ID</span></a>
+			<a href="" class="btn-middle btn-B"><span>Find Password</span></a>
+		</div>
+	</div>
+	<!-- //find -->	
+</section>
+
+<div class="t_line_blue">
+	<section class="section pt10 pb40">
+		<div class="register-module">
+			<div class="tbl-B">
+				<table summary="등록일정보">
+					<caption class="skip">등록일정보</caption>
+					<thead>
+						<tr>  
+							<th scope="col">Early Registration</th>
+							<th scope="col">Standard Registration</th>
+							<th scope="col">On-site Registration</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="text-area">
+									<p class="text14 c_black">Till Sat 31st August</p>
+									<p class="text12">(23:59 Korea time, GMT+9hours)</p>
+								</div>
+							</td>
+							<td>
+								<div class="text-area">
+									<p class="text14 c_black">Till Sat 31st August</p>
+									<p class="text12">(23:59 Korea time, GMT+9hours)</p>
+								</div>
+							</td>
+							<td>
+								<div class="text-area">
+									<p class="text14 c_black">Till Sat 31st August</p>
+									<p class="text12">(23:59 Korea time, GMT+9hours)</p>
+								</div>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>	
+</div>
+
+<!-- 비밀번호찾기 팝업-->
+<div class="alert-module is-active">
+	<a href="#" class="btn-alert-close"><span>닫기</span></a>
+	<div class="inner">
+		<h3 class="title"><span>Find Password</span></h3>
+		<div class="text-area pt5 pb10 lh16">
+			<p class="text14 c_black">Please input your ID and last 4 digits of mobile number. <br>Search result is displayed on the screen.</p>
+		</div>
+		<div class="find-form pb10">
+			<div class="find-form-id"><label for="userFindId" class="skip">아이디</label><input type="text" id="userFindId" placeholder="ID(E-mail)" name="userFindId"></div>
+			<div class="find-form-num pt5"><label for="userFindPhone" class="skip">핸드폰번호</label><input type="text" placeholder="Last 4 digits of mobile number" name="userFindPhone" id="userFindPhone"></div>
+			<a href="" class="btn-find"><span>Find ID</span></a>
+		</div>		
+		<div class="text-area pt30">
+			<p class="text14 c_black"><span>Forgot Your ID?</span>  <a href="" class="c_red">Please click here.</a></p>
+		</div>
+	</div>
+</div>
+<!-- //비밀번호찾기 팝업-->
+
+<!-- 아이디찾기 팝업-->
+<div class="alert-module ">
+	<a href="#" class="btn-alert-close"><span>닫기</span></a>
+	<div class="inner">
+		<h3 class="title"><span>Find ID</span></h3>
+		<div class="text-area pt5 pb10 lh16">
+			<p class="text14 c_black">Please input your ID and last 4 digits of mobile number. <br>Search result is displayed on the screen.</p>
+		</div>
+		<div class="find-form pb10">
+			<div class="find-form-id"><label for="userFindName" class="skip">이름</label><input type="text" id="userFindName" placeholder="First name" name="userFindName"></div>
+			<div class="find-form-num pt5"><label for="userFindPhone" class="skip">핸드폰번호</label><input type="text" placeholder="Last 4 digits of mobile number" name="userFindPhone" id="userFindPhone"></div>
+			<a href="" class="btn-find"><span>Find ID</span></a>
+		</div>		
+		<div class="text-area pt30">
+			<p class="text14 c_black"><span>Forgot Your ID?</span>  <a href="" class="c_red">Please click here.</a></p>
+		</div>
+	</div>
+</div>
+<!-- //아이디찾기 팝업-->

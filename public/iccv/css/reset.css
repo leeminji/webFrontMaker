@@ -24,15 +24,14 @@
 */
 
 /* google webfont  */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 /*
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css) "Noto Sans KR",;
-*/
-
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-
+*/
 /**** reset.css ****/
 	html,body, div,p,h1,h2,h3,h4,h5,h6,input,button,textarea,select,table,ul,ol,li,dl,dt,dd,label,a,strong{margin:0;padding:0;}
-	body, a, input, button, select, p,h1,h2,h3,h4,h5,h6,textarea,select{font-weight:400;font-family:'Nanum Gothic','나눔고딕','Malgun Gothic','맑은고딕','sans-serif';font-size:1em;line-height:1.2em;color:#666666;}
+	body, a, input, button, select, p,h1,h2,h3,h4,h5,h6,textarea,select{font-weight:400;font-family:'Noto Sans KR','나눔고딕','Malgun Gothic','맑은고딕','sans-serif';font-size:1em;line-height:1.2em;color:#666666;}
 	span, strong{line-height: 1em}
 	table{width:100%;table-layout:fixed;border-collapse: collapse;border-spacing: 0;}
 	legend {width:0;height:0;font-size:0;line-height:0;overflow:hidden}
@@ -42,14 +41,12 @@
 	label,button,input[type="button"],input[type="submit"]{cursor:pointer;border:0;outline:0;}
 	input{display:inline-block;*display:inline;border:0;}
 	button{display:inline-block;*display:inline;padding:0;margin:0;border:0;cursor:pointer;vertical-align:middle;overflow:visible;background:transparent;outline: none;}
-	button::-moz-focus-inner,input::-moz-focus-inner, button:active{}
 	select, button{box-sizing: content-box;}
 	hr{display:none;}
 
 	a{text-decoration:none;color:#666666;vertical-align:middle}
 	a:hover{text-decoration:none;color:#555}
 	a:selected, a:visited {outline: none}
-	a:active, a:focus {}
 
 	/* hidden contents */
 	.skip, .hidden, .commonH{position:absolute; width:0; height:0; font-size:0; line-height:0; overflow:hidden; visibility:hidden; z-index:-1;}
@@ -108,7 +105,7 @@
 	select[width="30"]{width:30em}
 
 
-/* ������ */
+/* base.css */
 	.m_data{display:none !important;}
 	.pc_data{display:block !important;}
 	.break{word-break:break-all;}
@@ -349,6 +346,7 @@
 	/* text-area */
 	.text-area p{color:#666666;}
 	.text-area li{color:#666666;}
+	.text-area span, .text-area a{vertical-align: middle}
 
 	.text-area.lh16 p{line-height:1.6em}
 	.text-area.lh18 p{line-height:1.8em}
@@ -377,8 +375,9 @@
 	.text-area .text24{font-size:1.5em;}
 	.text-area .text20{font-size:1.25em;}
 	.text-area .text18{font-size:1.125em;}
-	.text-area .text14{font-size:0.875em;}
 	.text-area .text15{font-size:0.9375em;}
+	.text-area .text14{font-size:0.875em;}
+	.text-area .text12{font-size:0.75em;}		
 	.text-area .ls1{letter-spacing:-1px}
 	.text-area .ls2{letter-spacing:-2px}
 

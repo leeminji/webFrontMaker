@@ -42,53 +42,15 @@ var ux = (function(){
 			//메인메뉴
 			objThis.mainGnb();
 
-			TweenMax.to($(".logo-area"), 1, {x:-10});
+			//TweenMax.to($(".logo-area"), 1, {x:-10});
 		},
 		//메인
 		main : function(){
 			var objThis = this;
 
-			//메인슬라이드
-			var mainVisual = $('#main-visual').bxSlider({
-				mode: "fade", //'horizontal', 'vertical', 'fade'
-				speed: 1000,
-				pause: 5000,
-				auto: true,
-				stopAutoOnClick : true,
-				preventDefaultSwipeX: true,
-				controls: true,
-				autoHover: true,
-				pager: false,
-				onSliderLoad : function(i){
-					var visualImg = this.children().eq(i).find('.visual-img');
-					TweenMax.to( visualImg, 1, {css:{scale:1.05}});
-					visualImg.addClass("active");
-					var visualText = this.children().eq(i).find('.visual-text p');
-					visualText.addClass("n-active");
-				},
-				onSlideBefore : function(e, o, n){ 
-					this.children().eq(o).find('.visual-img').removeClass("active");
-					var visualText = this.find('.visual-text p');
-					visualText.removeClass('n-active');
-				},
-				onSlideAfter : function(e, o, n){
-					var visualImg = this.children().eq(n).find('.visual-img');
-					visualImg.addClass("active");
-					var visualText = this.children().eq(n).find('.visual-text p');
-					visualText.addClass("n-active");
-				}
-			});
-
 			//모션
 			objThis.loadMotion();
-			
-			//갤러리
-			$("#gallery-main-list").slick({
-				slidesToShow: 4,
-				slidesToScroll: 1,
-				autoplay: true,
-				autoplaySpeed: 2000
-			});
+
 		},
 		mainGnb : function(){
 			var menu = $("#main-gnb-area");

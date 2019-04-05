@@ -7,7 +7,7 @@ var ux = require("./lib/ux"); //UX 라이브러리
 var config = require("./iccv-config"); //설정
 
 //메인라우터
-var routerMain = require('./router/main');
+//var routerMain = require('./router/main');
 //var routerCyclo = require("./router/cyclo");
 var routerIccv = require("./router/iccv");
 
@@ -43,5 +43,5 @@ var configMenu = function (req, res, next) {
 
 app.use(configMenu);
 //app.use('/', routerMain); //메인라우터
-app.use('/', routerIccv); //메인라우터
+app.use('/', routerIccv); //iccv라우터
 

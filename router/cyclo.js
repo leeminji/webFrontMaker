@@ -69,4 +69,13 @@ router.get('/gallery', function (req, res) {
 	});
 });
 
+router.get('/gallery/:id', function (req, res) {
+	var config = req.app.get('config');
+	res.render('cyclo/_layout', {
+		title: config.name,
+		menu : config.menu,
+		page : 'gallery/view'
+	});
+});
+
 module.exports = router;
