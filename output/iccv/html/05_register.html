@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Type" content="text/html;charset=euc-kr">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<!--[if IE 7]><html lang="ko" class="ie7"><![endif]-->
+	<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+	<link rel="shortcut icon" href="./../public/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="./../public/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./../public/css/style.css">
+	<title>ICCV</title>
+	<script src="./../public/js/jquery-1.8.3.min.js"></script>
+	<!--[if lte IE 8]>
+	<script src="./../public/js/html5.js"></script>
+	<script src="./../public/js/ie8.js"></script>
+	<![endif]-->
+	<script src="./../public/js/jquery-ui.js"></script>
+</head>
+<body>
+	<div id="loading" class="loading">loading..</div>
+	<!-- skipToContent -->
+	<div id="skipToContent">
+		<a href="#container">본문으로 바로가기</a>
+		<a href="#main-gnb">메뉴 바로가기</a>
+	</div>
+	<!-- //skipToContent -->
+	<div class="allwrap">
+		<!-- header 상단 -->
+		<div class="header-area b_line_gray">
+			<div class="section pt5">
+				<header id="header" class="header">
+					<!-- logo -->
+					<h1 class="logo-area">
+					<a href="/" class="logo"><span>ICCV</span></a>
+					<p class="text"><span>International Conf. on Computer Vision 2019 <br>
+					Oct.27-Nov.2, 2019</span></p>
+					</h1>
+					<!-- //logo -->
+					<!-- global-gnb -->
+					<nav class="global-gnb" id="global-gnb">
+						<a href="/"><span>Login</span></a>
+						<a href="/mypage"><span>Confirmation(my Page)</span></a>
+					</nav>
+					<!-- //global-gnb -->
+					<h2 class="header-title pt30 pb10"><span>International Conf. on Computer Vision 2019 Registration</span></h2>
+				</header>
+			</div>
+		</div>
+		<!-- //header 상단 -->
+		<hr />
+		<!-- container 본문 -->
+		<div class="container-area">
+
+			<section class="">
+
+				<!-- optional -->
+				<div class="optional-module pt20 ">
+					<h2 class="main-title b_line"><span>Optional Items</span></h2>
+					<div class="inner pt40">
+						<div class="tbl-C tbl-order">
+							<table>
+							<caption class="skip">Optional Items</caption>
+							<colgroup>
+							<col class="col1">
+							<col class="col2">
+							<col class="col3">
+							<col class="col4">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">Category</th>
+								<th scope="col">Amount</th>
+								<th scope="col">Quantity</th>
+								<th scope="col">Sub-Total</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td class="left"><label><input type="checkbox">	Express shipping for Invitation Letter (email and 1st Class mail is free)</label></td>
+								<td><span class="c_red">KRW 62,000</span></td>
+								<td><input type="text"></td>
+								<td><span class="c_red">KRW 000,000</span></td>
+							</tr>
+							<tr>
+								<td class="left"><label><input type="checkbox">	additional guest - reception ticket (for your plus one or to add if you have an exhibit only registration</label></td>
+								<td><span class="c_red">KRW 62,000</span></td>
+								<td><input type="text"></td>
+								<td><span class="c_red">KRW 000,000</span></td>
+							</tr>
+							</tbody>
+							<tfoot>
+							<tr class="total">
+								<td colspan="1">Total</td>
+								<td colspan="3">KRW <span class="c_red">000,000</span></td>
+							</tr>
+							</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //optional -->
+
+				<!-- checkout -->
+				<div class="checkout-module pt50">
+					<h2 class="main-title b_line"><span>Check-out</span></h2>
+					<div class="inner pt10">
+						<h3 class="sub-title big"><span>Social Event</span></h3>
+						<div class="tbl-D tbl-checkout">
+							<table>
+							<caption class="skip">Social Event</caption>
+							<colgroup>
+							<col class="col1">
+							<col class="col2">
+							<col class="col3">
+							<col class="col4">
+							<col class="col5">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">No</th>
+								<th scope="col">Program</th>
+								<th scope="col">Venue</th>
+								<th scope="col">Attendance</th>
+								<th scope="col">Dietary Requirements</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>29 Oct</td>
+								<td>Welcome Reception</td>
+								<td>COEX D Hall</td>
+								<td><label><input type="radio" name="isAttend1"> <span>Yes</span></label> <label><input type="radio" name="isAttend1"> <span>No</span></label></td>
+								<td rowspan="2">Vegetarian, Kosher</td>
+							</tr>
+							<tr>
+								<td>31 Oct</td>
+								<td>Banquet</td>
+								<td>COEX D Hall</td>
+								<td><label><input type="radio" name="isAttend2"> <span>Yes</span></label> <label><input type="radio" name="isAttend2"> <span>No</span></label></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="inner pt20">
+						<h3 class="sub-title big"><span>Total Amount</span></h3>
+						<div class="item-list">
+							<div class="row">
+								<div class="tit"><span>* PASSPORT REGISTRATION</span></div>
+								<div class="cont"><span>KRW 0,000,000</span></div>
+							</div>
+							<div class="row">
+								<div class="tit"><span>* ONE DAY WORKSHOP/TUTORIAL PASS</span></div>
+								<div class="cont"><span>KRW 0,000,000</span></div>
+							</div>
+							<div class="row">
+								<div class="tit"><span>* OTHERS</span></div>
+								<div class="cont"><span>KRW 0,000,000</span></div>
+							</div>
+							<div class="row">
+								<div class="tit"><span>* OPTIONAL ITEMS</span></div>
+								<div class="cont"><span>KRW 0,000,000</span></div>
+							</div>
+						</div>
+						<div class="total-amount">
+							<div class="tit"><span>TOTAL AMOUNT*</span></div>
+							<div class="cont"><span>KRW</span> <span class="c_red">0,000,000</span></div>
+						</div>
+					</div>
+
+					<div class="inner pt10 pb20 b_line_gray">
+						<h3 class="sub-title big"><span>Useful Information</span></h3>
+						<div class="list-A text12">
+							<ul class="clear clearfix">
+								<li>All dates are based on Korea Time (23:59 Korea time, GMT+9hours)</li>
+								<li>Online registration payments may be made by credit card or by bank transfer.</li>
+								<li>Registrations will not be confirmed without payment.</li>
+								<li>Cancellation fees do not include bank transfer fees, all and any transaction charges incurred during bank transfers are at the registrants' expense.</li>
+								<li>Please note that refunds will be provided after the Conference.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner pt10 pb20 b_line_gray">
+						<h3 class="sub-title big"><span>Refund policy</span></h3>
+						<div class="list-A text12">
+							<ul class="clear clearfix">
+								<li>All refund requests must be made via email to the Organizing Secretariat (registration@iccv2019.kr)</li>
+								<li>All cancellations received before and on Saturday 31st August will be subject to a 20% cancellation fee.</li>
+								<li>All cancellations received before and on Tuesday 15th October will be subject to a 50% cancellation fee.</li>
+								<li>NO REFUNDS will be made for cancellation after Wednesday 16th October.</li>
+								<li>Cancellations should be submitted in writing via e-mail or fax to the Registration Office until Monday 15th October.</li>
+							</ul>
+						</div>
+						<div class="text-area pt20">
+							<a href=""  class="c_red"><strong>(Download the cancellation form)</strong></a>
+						</div>
+					</div>
+					<div class="inner pt10 pb50">
+						<h3 class="sub-title big"><span>Payment Method</span></h3>
+						<div class="button-area pt20">
+							<a href="javascript:;" onclick="ux.openPopup('pay-card', true);" class="btn-small btn-C btn-round"><span>Credit Card</span></a>
+							<a href="javascript:;" onclick="ux.openPopup('pay-bank', true);" class="btn-small btn-E btn-round"><span>Bank Transfer</span></a>
+							<a href="/mypage" class="btn-small btn-A btn-round"><span>Pay later</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- //checkout -->
+
+			</section>
+
+
+			<!-- Credit Card-->
+			<div class="alert-module bigger" id="pay-card">
+				<a href="javascript:ux.closePopup('pay-card', true);" class="btn-alert-close"><span>닫기</span></a>
+				<div class="inner c_red">
+					<h3 class="alert-title c_red pt10"><span>Credit Card Payment Information</span></h3>
+					<div class="tbl-E tbl-card mt20">
+						<table>
+						<colgroup>
+						<col class="col1">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">Payment</th>
+							<td>ICCV 2019 Registration Fee</td>
+						</tr>
+						<tr>
+							<th scope="row">Amount</th>
+							<td>KRW 10,000,000</td>
+						</tr>
+						<tr>
+							<th scope="row">Name</th>
+							<td>Gil dong,Hong</td>
+						</tr>
+						<tr>
+							<th scope="row">E-mail</th>
+							<td>gildong@naver.com</td>
+						</tr>
+						<tr>
+							<th scope="row">Phone</th>
+							<td>821012345678</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="list-A text12 pt10">
+						<ul class="clear clearfix text-area">
+							<li>Only international credit cards <span class="c_red">(VISA, MASTER, JCB, UNION PAY, AMEX)</span> accepted.</li>
+							<li>Credit card information such as card number and expiration date is transmitted to the credit card company in encryption.</li>
+							<li>Please click on “Pay now’ button just one time to prevent duplicate payment and wait until the result message appears.</li>
+							<li>All service chares on credit card are to be paid by registrants.</li>
+						</ul>
+					</div>
+					<div class="button-right pt20">
+						<a href="" class="btn-small btn-C btn-round"><span>Credit Card</span></a>
+						<a href="/mypage" class="btn-small btn-A btn-round"><span>Pay later</span></a>
+					</div>
+				</div>
+			</div>
+			<!-- //Credit Card-->
+
+
+
+			<!-- Bank Transfer -->
+			<div class="alert-module bigger" id="pay-bank">
+				<a href="javascript:ux.closePopup('pay-bank', true);" class="btn-alert-close"><span>닫기</span></a>
+				<div class="inner c_red">
+					<h3 class="alert-title c_blue pt10"><span>Bank Transfer Payment Information</span></h3>
+					<div class="tbl-E tbl-bank mt20 c_blue">
+						<table>
+						<colgroup>
+						<col class="col1">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">Bank Name</th>
+							<td>Shinhan Bank</td>
+						</tr>
+						<tr>
+							<th scope="row">Branch</th>
+							<td>Trade Center Cooperation Business Banking Center</td>
+						</tr>
+						<tr>
+							<th scope="row">Account No.</th>
+							<td>140-010-214925</td>
+						</tr>
+						<tr>
+							<th scope="row">Beneficiary</th>
+							<td>COEX</td>
+						</tr>
+						<tr>
+							<th scope="row">SWIFT Code</th>
+							<td>SHBKKRSE</td>
+						</tr>
+						<tr>
+							<th scope="row">Bank Address</th>
+							<td>1F, 513 Yeongdong-daero, Gangnam-gu, Seoul 06164, Korea</td>
+						</tr>
+						<tr>
+							<th scope="row">Amount</th>
+							<td>KRW 10,000,000</td>
+						</tr>
+						<tr>
+							<th scope="row">Transfer Date</th>
+							<td><span class="datepicker-area"><input type="text" class="datepicker" size="10" placeholder="mm/dd/yy"></span></td>
+						</tr>
+						<tr>
+							<th scope="row">Sender</th>
+							<td><input type="text" size="20" required></td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="list-A text12 pt10">
+						<ul class="clear clearfix text-area">
+							<li>The sender's name should be the registrant's name. Failure to ensure that the payment sender and registrant's name match may lead to errors in your registration.</li>
+							<li>Please be aware that bank transfer fees must be paid by the sender. We recommend that you check on the transfer fees with your bank before sending your registration payment.</li>
+							<li>In the case of payment via bank transfer, we recommend that you fax us the receipt of your bank transfer to confirm and identify your payment</li>
+						</ul>
+					</div>
+					<div class="button-right pt20">
+						<a href="" class="btn-small btn-E btn-round"><span>Bank Transfer</span></a>
+						<a href="/mypage" class="btn-small btn-A btn-round"><span>Pay later</span></a>
+					</div>
+				</div>
+			</div>
+			<!-- //Bank Transfer -->
+
+			<div class="blind" id="blind"></div>
+
+		</div>
+		<!-- //container 본문-->
+		<hr>
+
+		<!-- footer 하단 -->
+		<div class="footer-area t_line_black">
+			<div class="section pb10">
+				<footer class="footer" id="footer">
+					<div class="footer-logo pt20"><strong>Organizing Secretariat of ICCV 2019</strong></div>
+					<div class="footer-address pt10">
+						<address>
+						<p><span>513, Yeongdong-Daero, Gangnam-Gu, Seoul, 06164, Republic of Korea Tel. +82 2 6000 8187 </span></p>
+						<p><span>E-mail: registration@iccv2019.kr Mon-Fri 9AM-6PM</span></p>
+						<p class="pt50"><span class="copyright">© 2019 ICCV</span></p>
+						</address>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<!-- //footer 하단 -->
+	</div>
+	<!--// wrap -->
+
+	<!-- ux 관련 스크립트 -->
+	<script src="./../public/js/TweenMax.min.js"></script>
+	<script src="./../public/js/ux.js"></script>
+</body>
+</html>

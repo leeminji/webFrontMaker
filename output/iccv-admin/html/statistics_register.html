@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Type" content="text/html;charset=euc-kr">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<!--[if IE 7]><html lang="ko" class="ie7"><![endif]-->
+	<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+	<link rel="shortcut icon" href="./../public/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./../public/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./../public/css/style.css">
+	<title>ICCV</title>
+	<script src="./../public/js/jquery-1.8.3.min.js"></script>
+	<!--[if lte IE 8]>
+	<script src="./../public/js/html5.js"></script>
+	<script src="./../public/js/ie8.js"></script>
+	<![endif]-->
+	<script src="./../public/js/jquery-ui.js"></script>
+</head>
+<body>
+	<div id="loading" class="loading">loading..</div>
+	<!-- skipToContent -->
+	<div id="skipToContent">
+		<a href="#container">본문으로 바로가기</a>
+		<a href="#main-gnb">메뉴 바로가기</a>
+	</div>
+	<!-- //skipToContent -->
+	<div class="allwrap">
+		<!-- header 상단 -->
+		<div class="header-area">
+			<div class="section">
+				<header id="header" class="header">
+					<!-- logo -->
+					<h1 class="logo-area">
+					<a href="./index.html" class="logo">ICCV</a><span>Administrator</span>
+					</h1>
+					<!-- //logo -->
+					<!-- admin-main-area -->
+					<nav class="admin-main-area">
+						<ul class="clear">
+							<li><a href="./member_list.html"><span>회원 관리</span></a></li>
+							<li><a href="./register_list.html"><span>등록 관리</span></a></li>
+							<li><a href="./accomodation_list.html"><span>숙박 관리</span></a></li>
+							<li><a href="./tourism_list.html"><span>관광 관리</span></a></li>
+							<li><a href="./statistics_person.html"><span>등록인원 통계</span></a></li>
+							<li class="on"><a href="./statistics_register.html"><span>등록비 통계</span></a></li>
+							<li><a href="./statistics_accomodation.html"><span>숙박 통계</span></a></li>
+							<li><a href="./statistics_tourism.html"><span>관광 통계</span></a></li>
+						</ul>
+					</nav>
+					<!-- //admin-main-area -->
+				</header>
+			</div>
+		</div>
+		<!-- //header 상단 -->
+		<hr>
+		<!-- container 본문 -->
+		<div class="container-area">
+
+			<section class="section">
+				<h2 class="main-title b_line_gray"><span>등록비 통계</span></h2>
+				<div class="inner">
+					<h3 class="sub-title skip"><span>통계</span></h3>
+					<div class="board-top pt20 pb5 right">
+						<a href class="btn-reg btn-C"><span class="icon-excel"></span> <span class="text">엑셀 파일 다운로드</span></a>
+					</div>
+					<div class="tbl-D font14">
+						<table>
+						<colgroup>
+						<col style="width:15em">
+						<col style="width:20em">
+						<col style="width:6em">
+						<col style="width:6em">
+						<col>
+						<col>
+						<col>
+						<col>
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col" rowspan="2" colspan="4">Category</th>
+							<th scope="col" colspan="2">Early</th>
+							<th scope="col" colspan="2">Standard</th>
+							<th scope="col" colspan="2">On-site</th>
+							<th scope="col" colspan="2">Total</th>
+						</tr>
+						<tr class="smaller">
+							<th scope="col">Person</th>
+							<th scope="col">Fee(KRW)</th>
+							<th scope="col">Persons</th>
+							<th scope="col">Fee(KRW)</th>
+							<th scope="col">Persons</th>
+							<th scope="col">Fee(KRW)</th>
+							<th scope="col">Persons</th>
+							<th scope="col">Fee(KRW)</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th rowspan="11" class="c_green">PASSPORT REGISTRATION</th>
+							<td colspan="2" rowspan="2">IEEE or CVF member passport</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="2" colspan="2">Non-member passport</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" rowspan="2">Student IEEE or CVF member passport</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" rowspan="2">Non-member student</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" rowspan="2">Life/Retired members passport</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="height:3em">Sub Total(A)</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th rowspan="11" class="c_blue">ONE DAY WORKSHOP / TUTORIAL PASS</th>
+							<td colspan="2" rowspan="2">Non-member One-day Workshop/Tutorial pass</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="2" colspan="2">IEEE or CVF Member One-day Workshop/Tutorial pass</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" rowspan="2">Non-member Student One-day</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" rowspan="2">Student IEEE or CVF member One-day</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" rowspan="2">Exhibition & Posters Only One-day</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="height:3em">Sub Total(A)</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<th rowspan="11" class="c_orange">OTHERS</th>
+							<td colspan="2" rowspan="2">Extra Banquet ticket for accompanying person</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="2" colspan="2">Poster Printing</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" rowspan="2">Additional Expo</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" rowspan="2">Press Pass</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" rowspan="2">Sponsor Pass</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="height:3em">Sub Total(A)</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th rowspan="5" class="c_gray">OPTIONAL ITEMS</th>
+							<td colspan="2" rowspan="2">Express shipping for Invitation Letter</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="2" colspan="2">additional guest - reception ticket</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="bg">
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="height:3em">Sub Total(A)</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						</tbody>
+						<tfoot class="total">
+						<tr>
+							<td colspan="3" rowspan="2" style="font-size:1.4em">TOTAL AMOUNT (A+B+C+D)</td>
+							<td>미납</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>결제완료</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						</tfoot>
+						</table>
+					</div>
+				</div>
+
+			</section>
+
+		</div>
+		<!-- //container 본문-->
+		<hr>
+
+		<!-- footer 하단 -->
+		<div class="footer-area t_line_gray">
+			<footer class="pt20 footer">
+				<p class="copyright">© 2019 ICCV</p>
+			</footer>
+		</div>
+		<!-- //footer 하단 -->
+	</div>
+	<!--// wrap -->
+	<!-- ux 관련 스크립트 -->
+	<script src="./../public/js/TweenMax.min.js"></script>
+	<script src="./../public/js/ux.js"></script>
+</body>
+</html>

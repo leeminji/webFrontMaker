@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Type" content="text/html;charset=euc-kr">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<!--[if IE 7]><html lang="ko" class="ie7"><![endif]-->
+	<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+	<link rel="shortcut icon" href="./../public//favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="./../public//css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./../public//css/style.css">
+	<title>ICCV</title>
+	<script src="./../public//js/jquery-1.8.3.min.js"></script>
+	<!--[if lte IE 8]>
+	<script src="./../public//js/html5.js"></script>
+	<script src="./../public//js/ie8.js"></script>
+	<![endif]-->
+	<script src="./../public//js/jquery-ui.js"></script>
+</head>
+<body>
+	<div id="loading" class="loading">loading..</div>
+	<!-- skipToContent -->
+	<div id="skipToContent">
+		<a href="#container">본문으로 바로가기</a>
+		<a href="#main-gnb">메뉴 바로가기</a>
+	</div>
+	<!-- //skipToContent -->
+	<div class="allwrap">
+		<!-- header 상단 -->
+		<div class="header-area">
+			<div class="section">
+				<header id="header" class="header">
+					<!-- logo -->
+					<h1 class="logo-area">
+					<a href="/admin/" class="logo">ICCV</a><span>Administrator</span>
+					</h1>
+					<!-- //logo -->
+					<!-- admin-main-area -->
+					<nav class="admin-main-area">
+						<ul class="clear">
+							<li class="on"><a href="./member_list.html"><span>회원 관리</span></a></li>
+							<li><a href="./register_list.html"><span>등록 관리</span></a></li>
+							<li><a href="./accomodation_list.html"><span>숙박 관리</span></a></li>
+							<li><a href="./tourism_list.html"><span>관광 관리</span></a></li>
+							<li><a href="./statistics_person.html"><span>등록인원 통계</span></a></li>
+							<li><a href="./statistics_register.html"><span>등록비 통계</span></a></li>
+							<li><a href="./statistics_accomodation.html"><span>숙박 통계</span></a></li>
+							<li><a href="./statistics_tourism.html"><span>관광 통계</span></a></li>
+						</ul>
+					</nav>
+					<!-- //admin-main-area -->
+				</header>
+			</div>
+		</div>
+		<!-- //header 상단 -->
+		<hr />
+		<!-- container 본문 -->
+		<div class="container-area">
+
+			<section class="section">
+				<h2 class="main-title b_line_gray"><span>회원관리 > 회원정보수정</span></h2>
+				<div class="inner">
+					<h3 class="sub-title skip"><span>회원정보수정</span></h3>
+
+					<div class="tbl-B mt20">
+						<table>
+						<caption class="skip">등록폼</caption>
+						<colgroup>
+						<col style="width:18em">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row"><label for="userId">* ID(E-mail)</label></th>
+							<td>
+								<input type="text" size="20" name="userId" id="userId" value="honggildong "> @
+								<input type="text" size="20" name="userEmail" id="userEmail" value="naver.com">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="userPw">* Password</label></th>
+							<td>
+								<input type="password" size="20" name="userPw" id="userPw">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="userPwRe">* Confirm Password</label></th>
+							<td>
+								<input type="password" size="20" name="userPwRe" id="userPwRe">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="gender">* Gender</label></th>
+							<td>
+								<label><input type="radio" name="gender"><span>Male</span></label>
+								<label><input type="radio" name="gender"><span>Female</span></label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="title">* Title</label></th>
+							<td>
+								<label><input type="radio" name="title"><span>Prof.</span></label>
+								<label><input type="radio" name="title"><span>Dr.</span></label>
+								<label><input type="radio" name="title"><span>Mr.</span></label>
+								<label><input type="radio" name="title"><span>Mrs.</span></label>
+								<label><input type="radio" name="title"><span>Ms.</span></label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="firstName">* First Name</label></th>
+							<td>
+								<input type="text" size="20" name="firstName" id="firstName">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="middleName">Middle Name (if any)</label></th>
+							<td>
+								<input type="text" size="20" name="middleName" id="middleName">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="lastName">* Last Name</label></th>
+							<td>
+								<input type="text" size="20" name="lastName" id="lastName">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="affiliation">* Affiliation</label></th>
+							<td>
+								<input type="text" size="20" name="affiliation" id="affiliation">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="department">* Department</label></th>
+							<td>
+								<input type="text" size="20" name="department" id="department">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="city">* City</label></th>
+							<td>
+								<input type="text" size="20" name="city" id="city">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="address">* Address</label></th>
+							<td>
+								<input type="text" size="20" name="address" id="address">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="country">* Country</label></th>
+							<td>
+								<input type="text" size="20" name="country" id="country">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="postal">Postal Code</label></th>
+							<td>
+								<input type="text" size="20" name="postal" id="postal">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="phone">* Phone</label></th>
+							<td>
+								<input type="text" size="20" name="phone" id="phone">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="mobilePhone">Mobile Phone</label></th>
+							<td>
+								<input type="text" size="20" name="mobilePhone" id="mobilePhone">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="fax">Fax</label></th>
+							<td>
+								<input type="text" size="20" name="fax" id="fax">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="special">* Special Dietary</label></th>
+							<td>
+								<label><input type="radio" name="special"><span>None</span></label>
+								<label><input type="radio" name="special"><span>Vegitarian</span></label>
+								<label><input type="radio" name="special"><span>Muslim</span></label>
+								<label><input type="radio" name="special"><span>Kosher</span></label>
+								<label><input type="radio" name="special"><span>Others</span></label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="secondEmail">* Second E-mail</label></th>
+							<td>
+								<input type="text" size="20" name="secondEmail" id="secondEmail" value="honggildong02"> @
+								<input type="text" size="20" name="secondEmailAddress" id="secondEmailAddress" value="naver.com">
+							</td>
+						</tr>
+						<tr>
+							<th class="bg_01" scope="row"><label for="ieeeNumber">* IEEE Membership Number</label></th>
+							<td>
+								<input type="text" size="20" name="ieeeNumber" id="ieeeNumber" value="123456GFHF">
+							</td>
+						</tr>
+						<tr>
+							<th class="bg_01" scope="row"><label for="cvfNumber">* CVF Membership Number</label></th>
+							<td>
+								<input type="text" size="20" name="cvfNumber" id="cvfNumber" value="123456GFHF">
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="button-right pt20">
+						<a href="" class="btn-reg btn-D"><span class="text">수정완료</span></a>
+						<a href="" class="btn-reg btn-C"><span class="text">회원목록</span></a>
+					</div>
+				</div>
+
+			</section>
+
+		</div>
+		<!-- //container 본문-->
+		<hr>
+
+		<!-- footer 하단 -->
+		<div class="footer-area t_line_gray">
+			<footer class="pt20 footer">
+				<p class="copyright">© 2019 ICCV</p>
+			</footer>
+		</div>
+		<!-- //footer 하단 -->
+	</div>
+	<!--// wrap -->
+	<!-- ux 관련 스크립트 -->
+	<script src="./../public//js/TweenMax.min.js"></script>
+	<script src="./../public//js/ux.js"></script>
+</body>
+</html>

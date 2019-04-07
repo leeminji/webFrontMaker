@@ -1,8 +1,6 @@
 var client = require('cheerio-httpcli');
 var urlType = require('url');
-var request = require('request');
 var fs = require('fs');
-var path = require('path');
 var fsExtra = require("fs-extra"); 
 
 
@@ -10,11 +8,11 @@ var fsExtra = require("fs-extra");
 var LINK_LEVEL = 3;
 
 //URL지정
-var TARGET_URL = "http://localhost:3000/";
+var TARGET_URL = "http://localhost:3000/admin";
 var list = {};
 
 //output 프로젝트가 없으면 생성.
-var PROJECT_NAME = "ICCV";
+var PROJECT_NAME = "iccv-admin";
 var output_folder = __dirname+"\\output\\"+PROJECT_NAME;
 
 if( !fs.existsSync(__dirname+"\\output") ){
@@ -52,7 +50,7 @@ function downloadRec(url, level){
 
 	//HTML을 취득
 	client.fetch(url, {}, function(err, $, res){
-		
+
 		//링크된 페이지를 취득
 		$("a").each(function(idx){
 			var href = $(this).attr('href');

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Type" content="text/html;charset=euc-kr">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<!--[if IE 7]><html lang="ko" class="ie7"><![endif]-->
+	<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+	<link rel="shortcut icon" href="./../public/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./../public/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./../public/css/style.css">
+	<title>ICCV</title>
+	<script src="./../public/js/jquery-1.8.3.min.js"></script>
+	<!--[if lte IE 8]>
+	<script src="./../public/js/html5.js"></script>
+	<script src="./../public/js/ie8.js"></script>
+	<![endif]-->
+	<script src="./../public/js/jquery-ui.js"></script>
+</head>
+<body>
+	<div id="loading" class="loading">loading..</div>
+	<!-- skipToContent -->
+	<div id="skipToContent">
+		<a href="#container">본문으로 바로가기</a>
+		<a href="#main-gnb">메뉴 바로가기</a>
+	</div>
+	<!-- //skipToContent -->
+	<div class="allwrap">
+		<!-- header 상단 -->
+		<div class="header-area">
+			<div class="section">
+				<header id="header" class="header">
+					<!-- logo -->
+					<h1 class="logo-area">
+					<a href="./index.html" class="logo">ICCV</a><span>Administrator</span>
+					</h1>
+					<!-- //logo -->
+					<!-- admin-main-area -->
+					<nav class="admin-main-area">
+						<ul class="clear">
+							<li><a href="./member_list.html"><span>회원 관리</span></a></li>
+							<li class="on"><a href="./register_list.html"><span>등록 관리</span></a></li>
+							<li><a href="./accomodation_list.html"><span>숙박 관리</span></a></li>
+							<li><a href="./tourism_list.html"><span>관광 관리</span></a></li>
+							<li><a href="./statistics_person.html"><span>등록인원 통계</span></a></li>
+							<li><a href="./statistics_register.html"><span>등록비 통계</span></a></li>
+							<li><a href="./statistics_accomodation.html"><span>숙박 통계</span></a></li>
+							<li><a href="./statistics_tourism.html"><span>관광 통계</span></a></li>
+						</ul>
+					</nav>
+					<!-- //admin-main-area -->
+				</header>
+			</div>
+		</div>
+		<!-- //header 상단 -->
+		<hr>
+		<!-- container 본문 -->
+		<div class="container-area">
+
+			<section class="section">
+				<h2 class="main-title b_line_gray"><span>등록관리</span></h2>
+				<div class="inner">
+					<h3 class="sub-title skip"><span>목록</span></h3>
+					<div class="board-top pt10 pb10">
+						<select name="sfl" id="sfl" width="10">
+						<option value>검색</option>
+						<option value="id">ID</option>
+						<option value="firstName">First Name</option>
+						<option value="lastName">Last Name</option>
+						<option value="affiliation">Affiliation</option>
+						<option value="country">Country</option>
+						</select>
+						<input type="text" size="20" name="stx" id="stx">
+						<a href class="btn-reg btn-B"><span class="icon-search"></span> <span class="text">Search</span></a>
+						<a href class="btn-reg btn-C"><span class="icon-excel"></span> <span class="text">엑셀 파일 다운로드</span></a>
+					</div>
+					<div class="tbl-A font14 width200 c_blue">
+						<table>
+						<colgroup>
+						<col style="width:4em">
+						<col style="width:8em">
+						<col style="width:18em">
+						<col style="width:6em">
+						<col style="width:8em">
+						<col style="width:8em">
+						<col style="width:8em">
+						<col style="width:8em">
+						<col>
+						<col>
+						<col style="width:8em">
+						<col>
+						<col style="width:8em">
+						<col style="width:15em">
+						<col style="width:12em">
+						<col style="width:10em">
+						<col style="width:7em">
+						<col style="width:7em">
+						<col style="width:6em">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">No.</th>
+							<th scope="col">Registration<br>Number</th>
+							<th scope="col">ID</th>
+							<th scope="col">Title</th>
+							<th scope="col">First Name </th>
+							<th scope="col">Middle Name</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">Category</th>
+							<th scope="col">Passport<br>Registration</th>
+							<th scope="col">One Day Workshop/<br>Tutorial Pass</th>
+							<th scope="col">Date</th>
+							<th scope="col">Others </th>
+							<th scope="col">Code</th>
+							<th scope="col">Optional Item</th>
+							<th scope="col">Payment입금통장/<br>카드번호 마지막 4자리</th>
+							<th scope="col">Total Amount</th>
+							<th scope="col">결제완료여부</th>
+							<th scope="col">컨펌레터발송</th>
+							<th scope="col">관리자메모</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>19</td>
+							<td>S0001</td>
+							<td>coex_kim@naver.com</td>
+							<td> Mr. </td>
+							<td>Hansol</td>
+							<td>-</td>
+							<td>Kim</td>
+							<td>Early</td>
+							<td>Non-member Passport KRW 880,000</td>
+							<td>Non-member One-day Workshop/ Tutorial pass <br> KRW 410,000</td>
+							<td>Oct 27  </td>
+							<td>Additional Expo KRW 400,000 Extra Banquet ticket for accompanying person (3) KRW 300,000</td>
+							<td>Expo112</td>
+							<td>Additional Guest  – reception ticket (2) KRW 300,000</td>
+							<td>Bank Transfer </td>
+							<td>KRW 1,180,000</td>
+							<td>
+								<div class="text-area">
+									<strong class="state c_black">미납</strong><br>
+									<strong class="state c_yellow">면제처리</strong><br>
+									<strong class="state c_blue">결제확인</strong><br>
+									<strong class="state c_red">면제처리</strong>
+								</div>
+							</td>
+							<td>
+								<div class="text-area">
+									<a href="javascript:;" onclick="ux.openPopup('invoice', true);" class="btn"><strong class="state c_green">인보이스</strong></a><br>
+									<a href="javascript:;" onclick="ux.openPopup('letter', true);" class="btn"><strong class="state c_black">컨펌레터</strong></a>
+								</div>
+							</td>
+							<td><a href="javascript:memo.open();" class="btn"><span class="icon-memo">관리자메모</span></a></td>
+						</tr>
+						<tr>
+							<td>19</td>
+							<td>S0001</td>
+							<td>coex_kim@naver.com</td>
+							<td> Mr. </td>
+							<td>Hansol</td>
+							<td>-</td>
+							<td>Kim</td>
+							<td>Early</td>
+							<td>Non-member Passport KRW 880,000</td>
+							<td>Non-member One-day Workshop/ Tutorial pass <br> KRW 410,000</td>
+							<td>Oct 27  </td>
+							<td>Additional Expo KRW 400,000 Extra Banquet ticket for accompanying person (3) KRW 300,000</td>
+							<td>Expo112</td>
+							<td>Additional Guest  – reception ticket (2) KRW 300,000</td>
+							<td>Bank Transfer </td>
+							<td>KRW 1,180,000</td>
+							<td>
+								<div class="text-area">
+									<strong class="state c_black">미납</strong><br>
+									<strong class="state c_yellow">면제처리</strong><br>
+									<strong class="state c_blue">결제확인</strong><br>
+									<strong class="state c_red">면제처리</strong>
+								</div>
+							</td>
+							<td>
+								<div class="text-area">
+									<a href="javascript:;" onclick="ux.openPopup('invoice', true);" class="btn"><strong class="state c_green">인보이스</strong></a><br>
+									<a href="javascript:;" onclick="ux.openPopup('letter', true);" class="btn"><strong class="state c_black">컨펌레터</strong></a>
+								</div>
+							</td>
+							<td><a href="javascript:memo.open();" class="btn"><span class="icon-memo is-active">관리자메모</span></a></td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="pagging-area pt30">
+						<a href class="btn start"><span class="skip">처음</span></a>
+						<a href class="btn prev"><span class="skip">이전</span></a>
+						<strong class="active">1</strong>
+						<a href>2</a>
+						<a href class="btn next"><span class="skip">다음</span></a>
+						<a href class="btn last"><span class="skip">마지막</span></a>
+					</div>
+				</div>
+			</section>
+
+			<!-- invoice -->
+			<div class="alert-module bigger" id="invoice">
+				<a href="javascript:ux.closePopup('invoice', true);" class="btn-alert-close"><span>닫기</span></a>
+				<div class="inner c_green">
+					<div class="text-area pt10">
+						<p class="text48 c_black text-center"><strong>ICCV 2019</strong></p>
+						<p class="text18 text-center ls1p">Confirmation Letter of Registration</p>
+						<p class="text12 text-center ls2p pt5">October 27 –November 2, 2019┃Seoul, Republic of Korea</p>
+					</div>
+					<div class="text-area pt5">
+						<p class="text-right text14"><strong class="c_black">October 1, 2019</strong></p>
+					</div>
+					<div class="tbl-C font14 mt20 width15">
+						<table>
+						<colgroup>
+						<col style="width:10em">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">Name</th>
+							<td>Gil dong,Hong</td>
+						</tr>
+						<tr>
+							<th scope="row">Affiliation</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Department</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Country</th>
+							<td></td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="text-area pt10 lh16">
+						<p class="text12">Thank you for registering to attend International Conference on Computer Vision 2019, held October 27 - November 2, 2019, Republic of Korea. This letter confirms that you have completed registration for ICCV 2019.</p>
+					</div>
+					<div class="tbl-B c_green mt5">
+						<table>
+						<colgroup>
+						<col style="width:18em">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">Registration Number</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Registration QR Code</th>
+							<td>
+								<div class="qr-code">
+									<img src="./../public/images/content/qr-code.png" alt>
+									<span>Please present your Registration Number or QR Code at Registration desk on site.</span>
+								</div>
+							</td>
+						</tr>
+						<tr><td colspan="2" class="th">Please ensure that the following details regarding your registration are correct:</td></tr>
+						<tr>
+							<th scope="row">Registration Category</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Payment Method</th>
+							<td></td>
+						</tr>
+						<tr><td colspan="2" class="th">Registration Fee</td></tr>
+						<tr>
+							<th scope="row">Passport Registration</th>
+							<td>KRW</td>
+						</tr>
+						<tr>
+							<th scope="row">One Day Workshop/Tutorial Pass</th>
+							<td>KRW</td>
+						</tr>
+						<tr>
+							<th scope="row">Others</th>
+							<td>KRW</td>
+						</tr>
+						<tr>
+							<th scope="row">Optional Items</th>
+							<td>KRW</td>
+						</tr>
+						<tr>
+							<th scope="row">TOTAL AMOUNT</th>
+							<td>KRW</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="text-area pb10">
+						<p class="text12 pt10">If you need to modify any of your personal details after completing your registration Payment, please send your
+						inquiries to the ICCV 2019 Organizing Secretariat by email (registration@iccv2019.kr) </p>
+						<p class="text12 pt10">For further inquiries regarding registration, please feel free to contact us. </p>
+						<p class="text12 pt10">Best regards, </p>
+					</div>
+					<div class="text-area t_line_green">
+						<p class="text12 pt10"><strong class="c_black">ICCV 2019 Organizing Secretariat </strong></p>
+						<p class="text12 pt5">513, Yeongdong-daero, Gangnam-gu, Seoul 06164 Korea  <br>E-mail: registration@iccv2019.kr <br>Fax: +82-2-6000-8190</p>
+					</div>
+					<div class="button-right pt20">
+						<a href class="btn-reg btn-E"><span class="text">Send</span></a>
+						<a href class="btn-reg btn-F"><span class="text">Cancel</span></a>
+					</div>
+				</div>
+			</div>
+			<!-- //invoice -->
+
+
+			<!-- letter -->
+			<div class="alert-module bigger" id="letter">
+				<a href="javascript:ux.closePopup('letter', true);" class="btn-alert-close"><span>닫기</span></a>
+				<div class="inner ">
+					<div class="text-area pt10">
+						<p class="text48 c_black text-center"><strong>ICCV 2019</strong></p>
+						<p class="text18 text-center ls1p">Confirmation Letter of Registration</p>
+						<p class="text12 text-center ls2p pt5">October 27 –November 2, 2019┃Seoul, Republic of Korea</p>
+					</div>
+					<div class="text-area pt5 pb5">
+						<p class="text12"><span class="c_black">Issue Number:</span></p>
+						<p class="text12"><span class="c_black">Issue Date:</span></p>
+					</div>
+					<div class="tbl-B c_blue">
+						<table>
+						<colgroup>
+						<col style="width:9em">
+						<col style="width:9em">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row" colspan="2">Purpose of Payment</th>
+							<td>Registration Fee in International Conference on Computer Vision 2019</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Date</th>
+							<td>October 27 – November 2, 2019</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Venue</th>
+							<td>COEX, Seoul, Republic of Korea</td>
+						</tr>
+						<tr><td colspan="3" class="th">Participant Information</td></tr>
+						<tr>
+							<th scope="row" colspan="2">First Name</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Middle Name</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Last Name</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Affiliation</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Department</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Country</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Registration Category</th>
+							<td></td>
+						</tr>
+						<tr><td colspan="3" class="th">Registration Fee</td></tr>
+						<tr>
+							<th scope="row" colspan="2">Passport Registration</th>
+							<td>KRW</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">One Day Workshop/Tutorial Pass</th>
+							<td>KRW</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Others</th>
+							<td>KRW</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Optional Items</th>
+							<td>KRW</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">TOTAL AMOUNT</th>
+							<td>KRW</td>
+						</tr>
+						<tr><td colspan="3" class="th">Registration Fee</td></tr>
+						<tr>
+							<th scope="row" rowspan="6" class="line">Bank Transfer</th>
+							<th scope="row">Bank Name</th>
+							<td>Shinhan Bank</td>
+						</tr>
+						<tr>
+							<th scope="row">Branch</th>
+							<td>Trade Center Cooperation Business Banking Center</td>
+						</tr>
+						<tr>
+							<th scope="row">Account No.</th>
+							<td>140-010-214925</td>
+						</tr>
+						<tr>
+							<th scope="row">Beneficiary</th>
+							<td>COEX</td>
+						</tr>
+						<tr>
+							<th scope="row">SWIFT Code</th>
+							<td>SHBKKRSE</td>
+						</tr>
+						<tr>
+							<th scope="row">Bank Address</th>
+							<td>1F, 513 Yeongdong-daero, Gangnam-gu, Seoul 06164, Korea</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="text-area pb10">
+						<p class="text12 pt10 ls1p c_blue">For further inquiries regarding Invoice, please feel free to contact us.
+						Best regards, </p>
+					</div>
+					<div class="text-area t_line_blue">
+						<p class="text12 pt10"><strong class="c_blue">ICCV 2019 Organizing Secretariat </strong></p>
+						<p class="text12 pt5 c_blue">513, Yeongdong-daero, Gangnam-gu, Seoul 06164 Korea  <br>E-mail: registration@iccv2019.kr <br>Fax: +82-2-6000-8190</p>
+					</div>
+					<div class="button-right pt20">
+						<a href class="btn-reg btn-G"><span class="text">Send</span></a>
+						<a href class="btn-reg btn-F"><span class="text">Cancel</span></a>
+					</div>
+				</div>
+			</div>
+			<!-- //letter -->
+
+			<!-- memo -->
+			<div class="alert-module smaller" id="memo">
+				<a href="javascript:memo.close();" class="btn-alert-close"><span>닫기</span></a>
+				<div class="inner c_blue">
+					<div class="text-area pt20">
+						<div class="text20 text-center"><span class="c_black">MEMO</span></div>
+					</div>
+					<div class="text-area pt20">
+						<div class="text14">
+							<textarea name id cols="30" rows="10" size="100">TEST</textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //memo -->
+
+			<div class="blind" id="blind"></div>
+
+			<script type="text/javascript">
+			var memo = {
+				drageOption : {
+					cancel : 'a, textarea'
+				}
+				,
+				el : $("#memo"),
+				is_drag : false,
+				open : function(){
+					if( !this.is_drag ){
+						this.el.draggable(this.drageOption);
+						this.is_drag = true;
+					}
+					console.log(this.el.css('top'));
+					var top = parseInt(this.el.css('top')) > 0 ? this.el.css('top') : $(window).scrollTop()+100;
+					this.el.addClass('is-active').css({
+					'top' : top
+					});
+				}
+				,
+				close : function(){
+					this.el.removeClass('is-active');
+					this.el.draggable("destroy");
+					this.is_drag = false;
+				}
+			}
+			</script>
+
+		</div>
+		<!-- //container 본문-->
+		<hr>
+
+		<!-- footer 하단 -->
+		<div class="footer-area t_line_gray">
+			<footer class="pt20 footer">
+				<p class="copyright">© 2019 ICCV</p>
+			</footer>
+		</div>
+		<!-- //footer 하단 -->
+	</div>
+	<!--// wrap -->
+	<!-- ux 관련 스크립트 -->
+	<script src="./../public/js/TweenMax.min.js"></script>
+	<script src="./../public/js/ux.js"></script>
+</body>
+</html>

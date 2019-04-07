@@ -1,0 +1,71 @@
+<section class="section">
+
+	<!-- register -->
+	<div class="pt20">
+		<h2 class="main-title b_line"><span>Paper Titles</span></h2>
+		
+		<div class="text-area p10 lh16">
+			<p class="text14 c_black">Every ICCV main conference or workshop paper MUST have at least one registered author (this can be a student author). <br>
+			Please list your accepted papers (only one author / paper needs to do this.) List each paper separately. For each paper, list the paper number. <br>
+			Workshop papers enter the workshop name.</p>
+		</div>
+		
+		<div class="list-input-module">
+			<div class="list-input paper-list">
+				<div class="row">
+					<div class="tit"><label for="paper1">Paper1</label></div>
+					<div class="cont"><input type="text" name="paper1" id="paper1"></div>
+				</div>
+				<div class="row">
+					<div class="tit"><label for="paper2">Paper2</label></div>
+					<div class="cont"><input type="text" name="paper2" id="paper2"></div>
+				</div>
+				<div class="row">
+					<div class="tit"><label for="paper3">Paper3</label></div>
+					<div class="cont"><input type="text" name="paper3" id="paper3"></div>
+				</div>
+				<div class="row">
+					<div class="tit"><label for="paper4">Paper4</label></div>
+					<div class="cont"><input type="text" name="paper4" id="paper4"></div>
+				</div>
+				<div class="row">
+					<div class="tit"><label for="paper5">Paper5</label></div>
+					<div class="cont"><input type="text" name="paper5" id="paper5"></div>
+				</div>
+			</div>
+			<div class="add-input">
+				<p class="text"><strong>Do you have more papers?</strong></p>
+				<div class="add-button">
+					<a href="javascript:;" onclick="papers.add();" class="btn-add"><span>Click to add paper</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //register -->
+
+	<div class="button-right pt10 pb50 button-area">
+		<div class="notice"><span>If you don't have a paper, please click the next button.</span></div>
+		<a href="/05_register" class="btn-small btn-round btn-C"><span class="btn-font-big">Next</span></a>
+	</div>
+	
+</section>
+<script type="text/javascript">
+	var papers = {
+		list : "paper-list",
+		count : function(){
+			return $("."+this.list).find('.row').size();
+		},
+		html : function(count){
+			var arr = [];
+				arr[0] = '<div class="row">';
+				arr[1] = 	'<div class="tit"><label for="paper'+count+'">Paper'+count+'</label></div>';
+				arr[2] = 	'<div class="cont"><input type="text" name="paper'+count+'" id="paper'+count+'"></div>';
+				arr[3] =  '</div>';
+			return arr.join('');
+		},
+		add : function(){
+			var html = this.html(this.count()+1);
+			$('.'+this.list).append( $(html) );
+		}
+	}
+</script>

@@ -10,6 +10,8 @@ var config = require("./iccv-config"); //설정
 //var routerMain = require('./router/main');
 //var routerCyclo = require("./router/cyclo");
 var routerIccv = require("./router/iccv");
+var routerIccvAdmin = require("./router/iccv-admin");
+
 
 var config = {
 	"menuJSON" : "menu-iccv.json",
@@ -20,6 +22,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 app.use('/public', express.static('public/iccv'));
+app.use('/publicAdmin', express.static('public/iccv-admin'));
 app.use(express.static('data'));
 
 app.listen(3000, function () {
@@ -44,4 +47,5 @@ var configMenu = function (req, res, next) {
 app.use(configMenu);
 //app.use('/', routerMain); //메인라우터
 app.use('/', routerIccv); //iccv라우터
+app.use('/admin', routerIccvAdmin);
 

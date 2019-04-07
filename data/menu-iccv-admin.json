@@ -1,0 +1,8 @@
+{
+	"all" : [
+		{"code": "100", "name" : "register", "link":"/register"},
+		{"code": "200", "name" : "personalInfo", "link":"/personalInfo"},
+		{"code": "300", "name" : "PERFORMANCE", "link":"/performance"},
+		{"code": "400", "name" : "GALLERY", "link":"/gallery"}
+	]
+}

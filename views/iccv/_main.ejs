@@ -6,7 +6,7 @@
 		<div class="inner pt20 b_line_gray">
 			<div class="login-sign">
 				<p class="text"><span>If this is your first visit, please click the button</span></p>
-				<a href="/register" class="btn-signup"><span>Sign up</span></a>
+				<a href="/01_register" class="btn-signup"><span>Sign up</span></a>
 			</div>
 			<div class="login-form mt5 pb10">
 				<div class="login-form-id"><label for="userId" class="skip">아이디</label><input type="text" id="userId" placeholder="Please Enter ID (E-mail Address)" name=""></div>
@@ -22,8 +22,8 @@
 		<h2 class="main-title b_line"><span>Find ID & Password</span></h2>
 		<div class="pt20"><p class="text14 c_black text-center">If you have forgotten your user ID or Password, please click one of the buttons below.</p></div>
 		<div class="text-center pt10">
-			<a href="" class="btn-middle btn-A"><span>Find ID</span></a>
-			<a href="" class="btn-middle btn-B"><span>Find Password</span></a>
+			<a href="javascript:;" onclick="ux.openPopup('alert-id', true);" class="btn-middle btn-A"><span>Find ID</span></a>
+			<a href="javascript:;" onclick="ux.openPopup('alert-pw', true);" class="btn-middle btn-B"><span>Find Password</span></a>
 		</div>
 	</div>
 	<!-- //find -->	
@@ -52,18 +52,16 @@
 							</td>
 							<td>
 								<div class="text-area">
-									<p class="text14 c_black">Till Sat 31st August</p>
+									<p class="text14 c_black">Sun 1st November – Tue 15th October</p>
 									<p class="text12">(23:59 Korea time, GMT+9hours)</p>
 								</div>
 							</td>
 							<td>
 								<div class="text-area">
-									<p class="text14 c_black">Till Sat 31st August</p>
-									<p class="text12">(23:59 Korea time, GMT+9hours)</p>
+									<p class="text14 c_black">Sun 27th October - Sat 2nd November</p>
 								</div>
 							</td>
 						</tr>
-
 					</tbody>
 				</table>
 			</div>
@@ -72,8 +70,8 @@
 </div>
 
 <!-- 비밀번호찾기 팝업-->
-<div class="alert-module is-active">
-	<a href="#" class="btn-alert-close"><span>닫기</span></a>
+<div class="alert-module" id="alert-pw">
+	<a href="javascript:ux.closePopup('alert-pw', true);" class="btn-alert-close"><span>닫기</span></a>
 	<div class="inner">
 		<h3 class="title"><span>Find Password</span></h3>
 		<div class="text-area pt5 pb10 lh16">
@@ -83,17 +81,17 @@
 			<div class="find-form-id"><label for="userFindId" class="skip">아이디</label><input type="text" id="userFindId" placeholder="ID(E-mail)" name="userFindId"></div>
 			<div class="find-form-num pt5"><label for="userFindPhone" class="skip">핸드폰번호</label><input type="text" placeholder="Last 4 digits of mobile number" name="userFindPhone" id="userFindPhone"></div>
 			<a href="" class="btn-find"><span>Find ID</span></a>
-		</div>		
+		</div>
 		<div class="text-area pt30">
-			<p class="text14 c_black"><span>Forgot Your ID?</span>  <a href="" class="c_red">Please click here.</a></p>
+			<p class="text14 c_black"><span>Forgot Your ID?</span>  <a href="javascript:ux.openPopup('alert-id', true);" class="c_red">Please click here.</a></p>
 		</div>
 	</div>
 </div>
 <!-- //비밀번호찾기 팝업-->
 
 <!-- 아이디찾기 팝업-->
-<div class="alert-module ">
-	<a href="#" class="btn-alert-close"><span>닫기</span></a>
+<div class="alert-module " id="alert-id">
+	<a href="javascript:ux.closePopup('alert-id');" class="btn-alert-close"><span>닫기</span></a>
 	<div class="inner">
 		<h3 class="title"><span>Find ID</span></h3>
 		<div class="text-area pt5 pb10 lh16">
@@ -102,11 +100,26 @@
 		<div class="find-form pb10">
 			<div class="find-form-id"><label for="userFindName" class="skip">이름</label><input type="text" id="userFindName" placeholder="First name" name="userFindName"></div>
 			<div class="find-form-num pt5"><label for="userFindPhone" class="skip">핸드폰번호</label><input type="text" placeholder="Last 4 digits of mobile number" name="userFindPhone" id="userFindPhone"></div>
-			<a href="" class="btn-find"><span>Find ID</span></a>
-		</div>		
+			<a href="javascript:;" class="btn-find" onclick="findId.find();"><span>Find ID</span></a>
+		</div>
+		<!-- 정보 검색 시, 화면에 바로 표기됨 -->
+		<div class="text-area pt10 find-id-result" style="display:none">
+			<p class="text18">Find ID : <strong class="c_blue">test@naver.com</strong></p>
+		</div>
 		<div class="text-area pt30">
-			<p class="text14 c_black"><span>Forgot Your ID?</span>  <a href="" class="c_red">Please click here.</a></p>
+			<p class="text14 c_black"><span>Forgot Your Password?</span>  <a href="javascript:ux.openPopup('alert-pw', true);" class="c_red">Please click here.</a></p>
 		</div>
 	</div>
 </div>
 <!-- //아이디찾기 팝업-->
+<div id="blind" class="blind"></div>
+
+
+<script type="text/javascript">
+	var findId = {
+		result : $(".find-id-result"),
+		find : function(){
+			this.result.css('display', 'block');
+		}
+	}
+</script>

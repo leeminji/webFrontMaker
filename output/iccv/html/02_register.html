@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Type" content="text/html;charset=euc-kr">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<!--[if IE 7]><html lang="ko" class="ie7"><![endif]-->
+	<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+	<link rel="shortcut icon" href="./../public/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./../public/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./../public/css/style.css">
+	<title>ICCV</title>
+	<script src="./../public/js/jquery-1.8.3.min.js"></script>
+	<!--[if lte IE 8]>
+	<script src="./../public/js/html5.js"></script>
+	<script src="./../public/js/ie8.js"></script>
+	<![endif]-->
+	<script src="./../public/js/jquery-ui.js"></script>
+</head>
+<body>
+	<div id="loading" class="loading">loading..</div>
+	<!-- skipToContent -->
+	<div id="skipToContent">
+		<a href="#container">본문으로 바로가기</a>
+		<a href="#main-gnb">메뉴 바로가기</a>
+	</div>
+	<!-- //skipToContent -->
+	<div class="allwrap">
+		<!-- header 상단 -->
+		<div class="header-area b_line_gray">
+			<div class="section pt5">
+				<header id="header" class="header">
+					<!-- logo -->
+					<h1 class="logo-area">
+					<a href="/" class="logo"><span>ICCV</span></a>
+					<p class="text"><span>International Conf. on Computer Vision 2019 <br>
+					Oct.27-Nov.2, 2019</span></p>
+					</h1>
+					<!-- //logo -->
+					<!-- global-gnb -->
+					<nav class="global-gnb" id="global-gnb">
+						<a href="/"><span>Login</span></a>
+						<a href="/mypage"><span>Confirmation(my Page)</span></a>
+					</nav>
+					<!-- //global-gnb -->
+					<h2 class="header-title pt30 pb10"><span>International Conf. on Computer Vision 2019 Registration</span></h2>
+				</header>
+			</div>
+		</div>
+		<!-- //header 상단 -->
+		<hr>
+		<!-- container 본문 -->
+		<div class="container-area">
+
+			<section class="section">
+
+				<!-- register -->
+				<div class="register-module pt20 ">
+					<h2 class="main-title b_line"><span>Personal Information</span></h2>
+
+					<div class="board-top text-area pt20 pb10">
+						<p class="text12 c_blue">* Required items</p>
+					</div>
+					<div class="tbl-A tbl-register">
+						<table>
+						<caption class="skip">등록폼</caption>
+						<colgroup>
+						<col class="col1">
+						<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row"><label for="userId">* ID(E-mail)</label></th>
+							<td>
+								<input type="text" size="20" name="userId" id="userId"> @
+								<input type="text" size="20" name="userEmail" id="userEmail">
+								<a href class="btn-reg btn-D"><span class="btn-font-small">Check</span></a>
+								<p class="noti"><span>Please make sure your email address is spelled correctly. Your email address will be used for future log-in.</span></p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="userPw">* Password</label></th>
+							<td>
+								<input type="password" size="20" name="userPw" id="userPw">
+								<p class="noti"><span>Password must be 8~15 characters long containing numbers and symbols.</span></p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="userPwRe">* Confirm Password</label></th>
+							<td>
+								<input type="password" size="20" name="userPwRe" id="userPwRe">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="gender">* Gender</label></th>
+							<td>
+								<label><input type="radio" name="gender"><span>Male</span></label>
+								<label><input type="radio" name="gender"><span>Female</span></label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="title">* Title</label></th>
+							<td>
+								<label><input type="radio" name="title"><span>Prof.</span></label>
+								<label><input type="radio" name="title"><span>Dr.</span></label>
+								<label><input type="radio" name="title"><span>Mr.</span></label>
+								<label><input type="radio" name="title"><span>Mrs.</span></label>
+								<label><input type="radio" name="title"><span>Ms.</span></label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="firstName">* First Name</label></th>
+							<td>
+								<input type="text" size="20" name="firstName" id="firstName">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="middleName">Middle Name (if any)</label></th>
+							<td>
+								<input type="text" size="20" name="middleName" id="middleName">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="lastName">* Last Name</label></th>
+							<td>
+								<input type="text" size="20" name="lastName" id="lastName">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="affiliation">* Affiliation</label></th>
+							<td>
+								<input type="text" size="20" name="affiliation" id="affiliation">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="department">* Department</label></th>
+							<td>
+								<input type="text" size="20" name="department" id="department">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="city">* City</label></th>
+							<td>
+								<input type="text" size="20" name="city" id="city">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="address">* Address</label></th>
+							<td>
+								<input type="text" size="20" name="address" id="address">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="country">* Country</label></th>
+							<td>
+								<input type="text" size="20" name="country" id="country">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="postal">Postal Code</label></th>
+							<td>
+								<input type="text" size="20" name="postal" id="postal">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="phone">* Phone</label></th>
+							<td>
+								<input type="text" size="20" name="phone" id="phone">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="mobilePhone">Mobile Phone</label></th>
+							<td>
+								<input type="text" size="20" name="mobilePhone" id="mobilePhone">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="fax">Fax</label></th>
+							<td>
+								<input type="text" size="20" name="fax" id="fax">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="special">* Special Dietary</label></th>
+							<td>
+								<label><input type="radio" name="special"><span>None</span></label>
+								<label><input type="radio" name="special"><span>Vegitarian</span></label>
+								<label><input type="radio" name="special"><span>Muslim</span></label>
+								<label><input type="radio" name="special"><span>Kosher</span></label>
+								<label><input type="radio" name="special"><span>Others</span></label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="secondEmail">* Second E-mail</label></th>
+							<td>
+								<input type="text" size="20" name="secondEmail" id="secondEmail"> @
+								<input type="text" size="20" name="secondEmailAddress" id="secondEmailAddress">
+							</td>
+						</tr>
+						<tr>
+							<th class="bg_01" scope="row"><label for="ieeeNumber">* IEEE Membership Number</label></th>
+							<td>
+								<input type="text" size="20" name="ieeeNumber" id="ieeeNumber">
+							</td>
+						</tr>
+						<tr>
+							<th class="bg_01" scope="row"><label for="cvfNumber">* CVF Membership Number</label></th>
+							<td>
+								<input type="text" size="20" name="cvfNumber" id="cvfNumber">
+							</td>
+						</tr>
+						<tr>
+							<th class="bg_01"></th>
+							<td>
+								<div class="text-area">
+									<p class="c_blue"><strong>Required for the following categories only:</strong></p>
+									<p class="pt5">IEEE or CVF member passport</p>
+									<p>Student IEEE or CVF member passport</p>
+									<p>IEEE or CVF Member One-day Workshop/Tutorial pass</p>
+									<p>Student IEEE or CVF member One-day</p>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="b_line_blue pb20">
+						<div class="scroll-area pt20">
+							<h3 class="sub-title"><span>Privacy Policy</span></h3>
+							<div class="scroll-content">
+								<div class="text-area">
+									<div class="text14">
+										<p>This website is operated by International Conference on Computer Vision the 2019(ICCV 2019) Secretariat Office and this privacy policy applies to this website only. <br>At iccv2019.thecvf.com, we respect our participants and understand that you are concerned about privacy. <br>We post this privacy policy to let you know what kind of information we collect, how it is handled, with whom it may be shared, what choices you have regarding our use of your information, and how you may access some of the data you provide to us.<br>As we continue to develop our website and take advantage of technologies to improve the services we offer, this may change. We therefore encourage you to refer to this policy on an ongoing basis so that you understand our current privacy policy.</p>
+										<p class=" c_black pt10"><strong>What we collect</strong></p>
+										<p class>We may collect the following information: name and job title<br>
+										contact information including email address<br>
+										demographic information such as postcode, preferences and interests<br>
+										other information relevant to customer surveys and/or offers</p>
+										<p class=" c_black pt10"><strong>What we do with the information we gather</strong></p>
+										<p class>We require this information to understand your needs and provide you with a better service, and in particular for the following reasons:<br>Internal record keeping.</p>
+										<p>- Internal record keeping.</p>
+										<p>- We may use the information to improve our products and services.</p>
+										<p>- We may use the information to customize the website according to your interests.</p>
+										<p>By registering ICCV 2019, Participants give permission for their contact details to be used for official conference purposes and to be</p>
+										<p>included in the list of participants.</p>
+										<p class="c_black pt10"><strong>Security</strong></p>
+										<p>We are committed to ensuring that your information is secure. In order to prevent unauthorized access or disclosure we have put in place suitable physical, electronic and managerial procedures to safeguard and secure the information we collect online.</p>
+										<p class="c_black pt10"><strong>Credit/Debit Card Payments</strong></p>
+										<p>All credit/debit card payments made through ICCV 2019 website are handled by our agent <span class="c_red">KGInicis</span>, using a secure (SSL) connection to ensure the safety and protection of your on-line payment. Credit card information is used solely for the purpose of payment processing.<span class="c_red">KGInicis</span> are not permitted to use your information for any other purposes than to secure payment for your purchase from us. ICCV 2019 does not have access to the credit/debit card numbers</p>
+										<p class="c_black pt10"><strong>How we use cookies</strong></p>
+										<p>A cookie is a small file which asks permission to be placed on your computer's hard drive. Once you agree, the file is added and the cookie
+										helps analyze web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an
+										individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about
+										your preferences. We use traffic log cookies to identify which pages are being used. This helps us analyze data about web page traffic and
+										improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data
+										is removed from the system.Overall, cookies help us provide you with a better website, by enabling us to monitor which pages you find
+										useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you
+										choose to share with us. You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually
+										modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>
+										<p class="c_black pt10"><strong>Links to other websites</strong></p>
+										<p>Our website may contain links to enable you to visit other websites of interest easily. However, once you have used these links to leave our
+										site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and
+										privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You
+										should exercise caution and look at the privacy statement applicable to the website in question.</p>
+										<p class="c_black pt10"><strong>Controlling your personal information</strong></p>
+										<p>You may choose to restrict the collection or use of your personal information in the following ways:- whenever you are asked to start registration on the website, look for the box that you can click to indicate that you agree with the information to be used by anybody for direct marketing purposes - the registration might be restricted if you decline to consent this policy</p>
+										<p class="c_black pt10"><strong>Other use and disclosure</strong></p>
+										<p>We will not sell, rent, or lease your personal information to third parties. We may disclose your personal information to our sponsors, contractors, related governmental service, and others who have agreed to treat your personal information in accordance with this privacy policy. We will not otherwise use or disclose your personal information. If you believe that any information we are holding about you is incorrect or incomplete, please write to or email us as soon as possible, at registration@iccv2019.kr. We will promptly correct any information found to be incorrect</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pt10 agree-area"><label><input type="checkbox"> <span>I acknowledge that I have read and agree to the above Privacy Policy</span></label></div>
+					</div>
+					<div class="b_line_blue pb20">
+						<div class="scroll-area pt20">
+							<h3 class="sub-title"><span>Badge Policy</span></h3>
+							<div class="scroll-content">
+								<div class="text-area">
+									<p class="text14">Access to all ICCV activities will be allowed only to people wearing current ICCV badges. The ICCV policy is to not reprint badges or replace lost badges or badge holders. If you lose your badge, you will be able to purchase a new registration at the current on-site rates. Please keep track of your badge and make sure you bring it each day. No exceptions.</p>
+								</div>
+							</div>
+						</div>
+						<div class="pt10 agree-area"><label><input type="checkbox"> <span>I have read the badge policy statement.</span></label></div>
+					</div>
+					<div class="b_line_blue pb20">
+						<div class="scroll-area pt20">
+							<h3 class="sub-title"><span>Attendees' Conduct Policy</span></h3>
+							<div class="scroll-content">
+								<div class="text-area">
+									<div class="text14">
+										<p>ICCV is committed to providing an atmosphere that encourages the free expression and exchange of ideas. It is the policy of ICCV that all participants of conference activities (workshops, tutorials, exhibitions, poster sessions, etc) will enjoy a welcoming environment free from unlawful discrimination, harassment, and retaliation.</p>
+										<p class="pt10">Harassment will not be tolerated in any form, including but not limited to harassment based on gender, gender identity and expression,
+										sexual orientation, disability, physical appearance, race, age, religion or any other status protected by laws in which the conference or
+										program is being held. Harassment includes the use of abusive, offensive or degrading language, intimidation, stalking, harassing
+										photography or recording, inappropriate physical contact, sexual imagery and unwelcome sexual advances. Any report of harassment at one
+										of our activities will be addressed immediately. Participants asked to stop any harassing behavior are expected to comply immediately.</p>
+										<p class="pt10">Exhibitors should not use sexualized images, activities, or other material in their booths and must refrain from the use of sexualized
+										clothing/uniforms/costumes, or otherwise creating a sexualized environment. Speakers should not use sexual language, images, or any
+										language or images that would constitute harassment as defined above in their talks.</p>
+										<p class="pt10">Violations should be reported to the organizer of the activity. In the ICCV sole discretion, unacceptable behavior may result in removal or
+										denial of access to meeting facilities or activities and other penalties, without refund of any applicable registration fees or costs. In addition,
+										violations may be reported to the individual’s employer.
+										</p>
+										<p class="pt10">By registering for ICCV all attendees and exhibitors agree to comply with these standards of behavior.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pt10 agree-area"><label><input type="checkbox"> <span>I have read and agree to the Code of Conduct Policy.</span></label></div>
+					</div>
+				</div>
+				<!-- //register -->
+
+				<div class="button-right pt10 pb50">
+					<a href="/03_register" class="btn-small btn-round btn-C"><span class="btn-font-big">Next</span></a>
+				</div>
+			</section>
+
+
+		</div>
+		<!-- //container 본문-->
+		<hr>
+
+		<!-- footer 하단 -->
+		<div class="footer-area t_line_black">
+			<div class="section pb10">
+				<footer class="footer" id="footer">
+					<div class="footer-logo pt20"><strong>Organizing Secretariat of ICCV 2019</strong></div>
+					<div class="footer-address pt10">
+						<address>
+						<p><span>513, Yeongdong-Daero, Gangnam-Gu, Seoul, 06164, Republic of Korea Tel. +82 2 6000 8187 </span></p>
+						<p><span>E-mail: registration@iccv2019.kr Mon-Fri 9AM-6PM</span></p>
+						<p class="pt50"><span class="copyright">© 2019 ICCV</span></p>
+						</address>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<!-- //footer 하단 -->
+	</div>
+	<!--// wrap -->
+
+	<!-- ux 관련 스크립트 -->
+	<script src="./../public/js/TweenMax.min.js"></script>
+	<script src="./../public/js/ux.js"></script>
+</body>
+</html>
